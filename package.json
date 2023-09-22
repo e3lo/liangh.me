@@ -2,7 +2,7 @@
   "name": "liangh.me",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://www.liangh.me",
+  "homepage": "https://liangh.me",
   "type": "module",
   "scripts": {
     "dev": "vite",
