@@ -1,9 +1,12 @@
 import NavigationBar from "../components/NavigationBar";
+import HeroBanner from "../components/HeroBanner";
 function Home() {
   return (
     <>
       <NavigationBar />
-      <h1 className="text-3xl font-bold underline"> Hello World</h1>
+      <div className="max-w-6xl mx-32">
+        <HeroBanner />
+      </div>
     </>
   );
 }
