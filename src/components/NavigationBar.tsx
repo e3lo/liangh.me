@@ -13,8 +13,8 @@ const NavigationBar = () => {
   };
 
   return (
-    <nav className="w-screen flex justify-center">
-      <div className="flex max-w-6xl w-full justify-between mx-32 my-6 p-1">
+    <nav className="w-full flex justify-center left-0">
+      <div className="flex max-w-6xl w-full justify-between mx-32 my-6 py-1">
         <div>
           <Link to={"/"} className={linkStying("/") + " underline"}>
             Liang Heng
