@@ -9,14 +9,14 @@ const NavigationBar = () => {
     console.log(location.pathname);
     return (
       "font-medium transition " +
-      (location.pathname === title ? "text-green-400" : "hover:text-green-200")
+      (location.pathname === title ? "text-green-600" : "hover:text-green-400")
     );
   };
 
   const [mobileMenu, setMobileMenu] = useState(false);
 
   return (
-    <nav className="w-full flex justify-center">
+    <nav className="fixed w-full flex justify-center bg-zinc-50 text-zinc-900 z-50">
       <div className="flex flex-wrap max-w-6xl w-full justify-between items-center mx-16 md:mx-32 py-4">
         <div className="">
           <Link to={"/"} className={linkStying("/") + " underline"}>
@@ -24,13 +24,13 @@ const NavigationBar = () => {
           </Link>
         </div>
         <button
-          className="md:hidden p-2 w-10 h-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-600"
+          className="md:hidden p-2 w-10 h-10 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400"
           onClick={() => {
             setMobileMenu(!mobileMenu);
           }}
         >
           <svg
-            className="w-6 h-6 text-white"
+            className="w-6 h-6 text-zinc-900"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -51,7 +51,7 @@ const NavigationBar = () => {
             " w-full text-center md:flex md:w-auto gap-6"
           }
         >
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-zinc-700 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent">
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-zinc-200 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent">
             <Link to={"/Achievements"} className={linkStying("/Achievements")}>
               <li className="p-2">Achievements</li>
             </Link>
