@@ -1,17 +1,21 @@
+import { Link } from "react-router-dom";
+
 const NavigationBar = () => {
   return (
-    <div className="w-screen flex justify-center">
+    <nav className="w-screen flex justify-center">
       <div className="flex max-w-6xl w-full justify-between mx-32 my-6 p-1">
         <div>
-          <button className="underline">Liang Heng</button>
+          <Link to={"/"} className="underline">
+            Liang Heng
+          </Link>
         </div>
         <div className="flex gap-4">
-          <div>Achievements</div>
-          <div>Projects</div>
-          <div>Hackathon</div>
+          <Link to={"/Achievements"}>Achievements</Link>
+          <Link to={`/Projects`}>Projects</Link>
+          <Link to={`/Contact`}>Contact</Link>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

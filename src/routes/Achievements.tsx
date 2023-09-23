@@ -1,6 +1,5 @@
-import NavigationBar from "./components/NavigationBar";
-
-function App() {
+import NavigationBar from "../components/NavigationBar";
+function Achievements() {
   return (
     <>
       <NavigationBar />
@@ -9,4 +8,4 @@ function App() {
   );
 }
 
-export default App;
+export default Achievements;
