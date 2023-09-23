@@ -4,7 +4,7 @@ function Home() {
   return (
     <>
       <NavigationBar />
-      <div className="max-w-6xl mx-32">
+      <div className="max-w-6xl m-32 xl:m-auto ">
         <HeroBanner />
       </div>
     </>
