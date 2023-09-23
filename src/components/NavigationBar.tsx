@@ -16,8 +16,8 @@ const NavigationBar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
 
   return (
-    <nav className="fixed w-full flex justify-center bg-zinc-50 text-zinc-900 z-50">
-      <div className="flex flex-wrap max-w-6xl w-full justify-between items-center mx-16 md:mx-32 py-4">
+    <nav className="fixed w-full flex justify-center bg-zinc-50 text-zinc-900 z-50 shadow-md">
+      <div className="flex flex-wrap max-w-4xl w-full justify-between items-center mx-16 md:mx-32 py-4">
         <div className="">
           <Link to={"/"} className={linkStying("/") + " underline"}>
             Liang Heng
