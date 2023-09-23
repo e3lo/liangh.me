@@ -1,7 +1,8 @@
 import ProjectCard from "./ProjectCard";
 
 import profilePic from "../assets/profilePic.jpg";
-import project1 from "../assets/project1.jpg";
+import project1Img from "../assets/project1.jpg";
+import project1Gif from "../assets/project1.gif";
 
 const HeroBanner = () => {
   return (
@@ -18,7 +19,8 @@ const HeroBanner = () => {
         <div className="hover:z-40 max-w-sm ml-auto">
           <ProjectCard
             points={["React", "TailwindCSS"]}
-            image={project1}
+            image={project1Img}
+            animation={project1Gif}
             title="HI"
           />
         </div>
