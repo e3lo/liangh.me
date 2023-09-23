@@ -4,8 +4,10 @@ function Home() {
   return (
     <>
       <NavigationBar />
-      <div className="md:h-screen bg-zinc-800 flex justify-center">
-        <HeroBanner />
+      <div className="h-screen w-screen">
+        <div className="md:h-screen bg-zinc-800 flex justify-center">
+          <HeroBanner />
+        </div>
       </div>
     </>
   );
