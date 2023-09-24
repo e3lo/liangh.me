@@ -12,8 +12,8 @@ const HeroBanner = () => {
 
   return (
     <div ref={constraintsRef} className=" w-full h-full">
-      <div className="h-full flex flex-col md:flex-row max-w-4xl mx-32 xl:m-auto pt-24 pb-8 gap-16 items-center">
-        <div className="md:basis-1/3">
+      <div className="h-full flex flex-col md:flex-row max-w-4xl mx-32 xl:m-auto mt-20 pb-8 gap-16 items-center">
+        <div className="md:basis-1/">
           <img className="rounded-full max-h-36" src={profilePic}></img>
           <div>
             <h1 className="text-6xl font-bold py-4">Liang Heng</h1>
@@ -83,13 +83,13 @@ const HeroBanner = () => {
             </a>
           </div>
         </div>
-        <div className="w-auto relative bg-slate-100 -top-1/4 self-center">
+        <div className="w-full h-full relative">
           <motion.div
             drag
             dragConstraints={constraintsRef}
             dragMomentum={false}
             whileDrag={{ scale: 1.05 }}
-            className="absolute"
+            className="absolute top-1/2 -translate-y-1/2"
           >
             <div className="max-w-xs">
               <ProjectCard
@@ -105,7 +105,7 @@ const HeroBanner = () => {
             dragConstraints={constraintsRef}
             dragMomentum={false}
             whileDrag={{ scale: 1.05 }}
-            className="absolute"
+            className="absolute absolute top-1/2 -translate-y-1/2"
           >
             <div className="max-w-xs">
               <ProjectCard
