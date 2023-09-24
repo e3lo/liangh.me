@@ -10,6 +10,7 @@ interface Props {
 }
 
 const ProjectCard = ({ points, image, animation, title }: Props) => {
+  const ANIMATION = false;
   const projectLink = "/Projects/" + title;
 
   const [animationState, setAnimationState] = useState(false);
@@ -27,7 +28,9 @@ const ProjectCard = ({ points, image, animation, title }: Props) => {
         className="card rounded-t-lg w-full"
         src={animationState ? animation : image}
         alt=""
-        onMouseEnter={startAnimation}
+        onMouseEnter={() => {
+          ANIMATION && startAnimation;
+        }}
       />
       <div className="p-5">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">

@@ -11,7 +11,7 @@ const HeroBanner = () => {
   const constraintsRef = useRef(null);
 
   return (
-    <div ref={constraintsRef} className=" w-full h-full">
+    <div ref={constraintsRef} className="w-full h-full">
       <div className="h-full flex flex-col md:flex-row max-w-4xl mx-32 xl:m-auto mt-20 pb-8 gap-16 items-center">
         <div className="md:basis-1/">
           <img className="rounded-full max-h-36" src={profilePic}></img>
@@ -89,9 +89,9 @@ const HeroBanner = () => {
             dragConstraints={constraintsRef}
             dragMomentum={false}
             whileDrag={{ scale: 1.05 }}
-            className="absolute top-1/2 -translate-y-1/2"
+            className="absolute top-1/2"
           >
-            <div className="max-w-xs">
+            <div className="max-w-xs -translate-y-1/2 rotate-12">
               <ProjectCard
                 points={["React", "TailwindCSS", "GitHub"]}
                 image={project1Img}
@@ -100,14 +100,15 @@ const HeroBanner = () => {
               />
             </div>
           </motion.div>
+
           <motion.div
             drag
             dragConstraints={constraintsRef}
             dragMomentum={false}
             whileDrag={{ scale: 1.05 }}
-            className="absolute absolute top-1/2 -translate-y-1/2"
+            className="absolute top-1/2"
           >
-            <div className="max-w-xs">
+            <div className="max-w-xs -translate-y-1/2">
               <ProjectCard
                 points={["React", "TailwindCSS", "GitHub"]}
                 image={project1Img}
