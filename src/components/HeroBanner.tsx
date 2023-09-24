@@ -12,15 +12,18 @@ const HeroBanner = () => {
 
   return (
     <div ref={constraintsRef} className="w-full h-full">
-      <div className="h-full flex flex-col md:flex-row max-w-4xl mx-32 xl:m-auto mt-20 pb-8 gap-16 items-center">
-        <div className="md:basis-1/">
-          <img className="rounded-full max-h-36" src={profilePic}></img>
+      <div className="h-full flex flex-col mt-24 max-w-4xl mx-8 md:flex-row md:mx-32 xl:m-auto  pb-8 gap-16 items-center">
+        <div className="text-center md:text-left">
+          <img
+            className="rounded-full max-h-36 mx-auto md:mx-0"
+            src={profilePic}
+          ></img>
           <div>
             <h1 className="text-6xl font-bold py-4">Liang Heng</h1>
             Hey, I’m a front-end UI UX developer. Currently studying in the
             university of Melbourne.
           </div>
-          <div className="flex flex-row">
+          <div className="flex flex-row justify-center md:justify-start">
             {/* Behance */}
             <a
               className="hover:text-green-400 transition p-4 pl-0"
@@ -83,7 +86,9 @@ const HeroBanner = () => {
             </a>
           </div>
         </div>
-        <div className="w-full h-full relative">
+
+        {/* Desktop Display */}
+        <div className="hidden md:block w-full h-full relative">
           <motion.div
             drag
             dragConstraints={constraintsRef}
@@ -117,6 +122,16 @@ const HeroBanner = () => {
               />
             </div>
           </motion.div>
+        </div>
+
+        {/* Mobile Display */}
+        <div className="max-w-xs md:hidden">
+          <ProjectCard
+            points={["React", "TailwindCSS", "GitHub"]}
+            image={project1Img}
+            animation={project1Gif}
+            title="Liangh.me portfolio"
+          />
         </div>
       </div>
     </div>
