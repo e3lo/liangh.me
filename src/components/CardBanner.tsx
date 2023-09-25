@@ -2,8 +2,6 @@ import project1 from "../assets/project1.jpg"; //5:6 aspect ratio
 
 import ImageCard from "./ImageCard";
 
-import { motion } from "framer-motion";
-
 const CardBanner = () => {
   return (
     <div className="w-full flex-col">
@@ -14,7 +12,7 @@ const CardBanner = () => {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-8 md:mx-32 xl:mx-auto pt-8 grid grid-cols-2 gap-8 justify-items-center mb-8">
+      <div className="max-w-4xl mx-8 md:mx-32 xl:mx-auto pt-8 grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center mb-8">
         <ImageCard src={project1} delayTime={0}></ImageCard>
         <ImageCard src={project1} delayTime={0}></ImageCard>
         <ImageCard src={project1} delayTime={0}></ImageCard>
