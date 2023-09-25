@@ -94,9 +94,9 @@ const HeroBanner = () => {
             dragConstraints={constraintsRef}
             dragMomentum={false}
             whileDrag={{ scale: 1.05 }}
-            className="absolute top-1/2 h-0"
+            className="absolute top-1/2 left-1/2 h-0"
           >
-            <div className="max-w-xs -translate-y-1/2 rotate-12">
+            <div className="max-w-xs -translate-y-1/2 -translate-x-1/2 rotate-12">
               <ProjectCard
                 points={["React", "TailwindCSS", "GitHub"]}
                 image={project1Img}
@@ -111,9 +111,9 @@ const HeroBanner = () => {
             dragConstraints={constraintsRef}
             dragMomentum={false}
             whileDrag={{ scale: 1.05 }}
-            className="absolute top-1/2 h-0"
+            className="absolute top-1/2 left-1/2 h-0"
           >
-            <div className="max-w-xs -translate-y-1/2">
+            <div className="max-w-xs -translate-y-1/2 -translate-x-1/2">
               <ProjectCard
                 points={["React", "TailwindCSS", "GitHub"]}
                 image={project1Img}
