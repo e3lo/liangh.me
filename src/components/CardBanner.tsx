@@ -1,4 +1,7 @@
-import project1 from "../assets/project1.jpg";
+import project1 from "../assets/project1.jpg"; //5:6 aspect ratio
+
+import ImageCard from "./ImageCard";
+
 import { motion } from "framer-motion";
 
 const CardBanner = () => {
@@ -12,38 +15,10 @@ const CardBanner = () => {
       </div>
 
       <div className="max-w-4xl mx-8 md:mx-32 xl:mx-auto pt-8 grid grid-cols-2 gap-8 justify-items-center mb-8">
-        <motion.img
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          src={project1}
-          className="w-full max-w-sm"
-        ></motion.img>
-        <motion.img
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ once: true }}
-          src={project1}
-          className="w-full max-w-sm"
-        ></motion.img>{" "}
-        <motion.img
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          src={project1}
-          className="w-full max-w-sm"
-        ></motion.img>{" "}
-        <motion.img
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ once: true }}
-          src={project1}
-          className="w-full max-w-sm"
-        ></motion.img>
+        <ImageCard src={project1} delayTime={0}></ImageCard>
+        <ImageCard src={project1} delayTime={0}></ImageCard>
+        <ImageCard src={project1} delayTime={0}></ImageCard>
+        <ImageCard src={project1} delayTime={0}></ImageCard>
       </div>
     </div>
   );
