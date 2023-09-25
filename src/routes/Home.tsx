@@ -9,7 +9,7 @@ function Home() {
       <div className="md:h-screen bg-zinc-800 flex justify-center">
         <HeroBanner />
       </div>
-      <div className="md:h-screen bg-zinc-100 flex justify-center">
+      <div className="bg-zinc-800 flex justify-center">
         <CardBanner />
       </div>
     </>
