@@ -6,9 +6,8 @@ function Home() {
   return (
     <>
       <NavigationBar />
-      <div className="md:h-screen bg-zinc-800 flex justify-center">
-        <HeroBanner />
-      </div>
+      <HeroBanner />
+
       <div className="bg-zinc-800 flex justify-center">
         <CardBanner />
       </div>
