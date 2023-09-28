@@ -16,8 +16,8 @@ const NavigationBar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
 
   return (
-    <nav className="fixed w-full flex justify-center bg-zinc-50 text-zinc-900 z-50 shadow-md">
-      <div className="flex flex-wrap max-w-4xl w-full justify-between items-center mx-16 md:mx-32 py-4">
+    <nav className=" w-full flex justify-center text-zinc-50 z-50">
+      <div className="flex flex-wrap max-w-4xl w-full justify-between items-center mx-16 md:mx-32 h-20">
         <div className="">
           <Link to={"/"} className={linkStying("/") + " underline"}>
             Liang Heng
@@ -30,7 +30,7 @@ const NavigationBar = () => {
           }}
         >
           <svg
-            className="w-6 h-6 text-zinc-900"
+            className="w-6 h-6 text-zinc-50"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
