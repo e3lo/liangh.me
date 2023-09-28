@@ -1,6 +1,5 @@
 import profilePic from "../assets/profilePic.jpg";
-import project1Img from "../assets/PortfolioProject/Wireframe.png";
-import project1Gif from "../assets/project1.gif";
+import SocialBar from "./parts/SocialBar";
 
 import { motion } from "framer-motion";
 import { useRef } from "react";
@@ -38,11 +37,30 @@ const HeroBanner = () => {
 
   return (
     <div className="w-screen max-w-full h-screen flex items-center justify-center relative -translate-y-20">
-      <div className="grid grid-cols-6 grid-rows-3 gap-1 w-4/5 h-1/2 lg:h-3/4 absolute">
+      {/* Background grid */}
+      <div className="grid grid-cols-6 grid-rows-3 gap-1 w-4/5 h-3/4 md:h-1/2 lg:h-3/4 absolute">
         {Array.from({ length: totalGridSpace }).map((_, i) => renderGrid(i))}
       </div>
-      <div className="grid grid-cols-6 grid-rows-3 gap-1 w-4/5 h-1/2 lg:h-3/4 absolute">
-        <div className=" text-4xl">Liang Heng</div>
+      {/* Foreground grid */}
+      <div className="grid items-center grid-cols-6 grid-rows-3 gap-1 w-4/5 h-3/4 md:h-1/2 lg:h-3/4 absolute">
+        <div className="col-start-2 md:col-start-1 row-start1 md:row-start-2 col-span-4 md:col-span-1 row-span-1">
+          <img
+            src={profilePic}
+            className=" rounded-md max-w-full max-h-full shadow-md p-4"
+          ></img>
+        </div>
+        {/* Emoji Thing */}
+        <div className="hidden md:block col-start-2 row-start-2 col-span-1 justify-self-center row-span-1 text-6xl">
+          📌
+        </div>
+        <div className=" col-start-2 row-start-2 col-span-4 md:col-start-3 justify-self-center md:justify-self-start text-6xl text-center md:text-[9vw] font-bold">
+          Liang Heng
+        </div>
+        <div className=" col-start-2 md:col-start-3 col-span-4 md:col-span-3 row-start-3 self-start max-w-md">
+          Hey! I'm a uni student focusing on front end web development and UI/UX
+          design.
+          <SocialBar xAlign={true}></SocialBar>
+        </div>
       </div>
     </div>
   );
