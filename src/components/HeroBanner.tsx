@@ -12,7 +12,7 @@ const HeroBanner = () => {
   const totalGridSpace = rowSize * colSize;
 
   const renderGrid = (i: number) => {
-    const styling = ["border-t-2", "border-r-2", "border-b-2", "border-l-2"];
+    const styling = ["border-t", "border-r", "border-b", "border-l"];
 
     if (i < colSize) {
       // If i is in start row
@@ -38,10 +38,10 @@ const HeroBanner = () => {
 
   return (
     <div className="w-screen max-w-full h-screen flex items-center justify-center relative -translate-y-20">
-      <div className="grid grid-cols-6 grid-rows-3 gap-1 w-4/5 h-3/4 absolute">
+      <div className="grid grid-cols-6 grid-rows-3 gap-1 w-4/5 h-1/2 lg:h-3/4 absolute">
         {Array.from({ length: totalGridSpace }).map((_, i) => renderGrid(i))}
       </div>
-      <div className="grid grid-cols-6 grid-rows-3 gap-1 w-4/5 h-3/4 absolute">
+      <div className="grid grid-cols-6 grid-rows-3 gap-1 w-4/5 h-1/2 lg:h-3/4 absolute">
         <div className=" text-4xl">Liang Heng</div>
       </div>
     </div>
