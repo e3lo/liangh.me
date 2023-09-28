@@ -37,7 +37,7 @@ const HeroBanner = () => {
   };
 
   return (
-    <div className="w-screen h-screen flex items-center justify-center bg-zinc-800 relative">
+    <div className="w-screen max-w-full h-screen flex items-center justify-center relative -translate-y-20">
       <div className="grid grid-cols-6 grid-rows-3 gap-1 w-4/5 h-3/4 absolute">
         {Array.from({ length: totalGridSpace }).map((_, i) => renderGrid(i))}
       </div>
