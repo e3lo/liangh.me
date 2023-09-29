@@ -53,7 +53,7 @@ const HeroBanner = () => {
   };
 
   return (
-    <div className="w-screen max-w-full h-screen flex items-center justify-center relative -translate-y-20">
+    <div className="w-screen max-w-full h-screen flex items-center justify-center relative">
       {/* Background grid */}
       <div
         ref={maskRef}
