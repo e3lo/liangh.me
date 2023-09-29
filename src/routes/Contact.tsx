@@ -1,9 +1,11 @@
 import NavigationBar from "../components/parts/NavigationBar";
+import ComingSoon from "../components/ComingSoon";
 function Contact() {
   return (
     <>
       <NavigationBar />
-      <h1 className="text-3xl font-bold underline"> Contact</h1>
+
+      <ComingSoon>I am coming soon!</ComingSoon>
     </>
   );
 }
