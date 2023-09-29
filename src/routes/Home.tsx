@@ -8,10 +8,6 @@ function Home() {
       <NavigationBar />
       <div className="bg-zinc-900">
         <HeroBanner />
-
-        <div className="flex justify-center">
-          <CardBanner />
-        </div>
       </div>
     </>
   );
