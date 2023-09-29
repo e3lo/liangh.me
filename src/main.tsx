@@ -7,6 +7,7 @@ import Home from "./routes/Home.tsx";
 import Achievements from "./routes/Achievements.tsx";
 import Contact from "./routes/Contact.tsx";
 import Projects from "./routes/Projects.tsx";
+import NotFound from "./routes/NotFound.tsx";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/Contact",
     element: <Contact />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
 
