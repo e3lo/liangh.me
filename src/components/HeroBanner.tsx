@@ -1,78 +1,105 @@
-import ProjectCard from "./parts/ProjectCard";
-import SocialBar from "./parts/SocialBar";
-
 import profilePic from "../assets/profilePic.jpg";
-import project1Img from "../assets/PortfolioProject/Wireframe.png";
-import project1Gif from "../assets/project1.gif";
+import SocialBar from "./parts/SocialBar";
+import "./HeroBanner.css";
 
-import { motion } from "framer-motion";
+import { motion, useMotionValue } from "framer-motion";
 import { useRef } from "react";
 
 const HeroBanner = () => {
-  const constraintsRef = useRef(null);
+  const rowSize = 3;
+  const colSize = 6;
+  const totalGridSpace = rowSize * colSize;
+
+  // Rendering the grid
+  const renderGrid = (i: number) => {
+    const styling = ["border-t", "border-r", "border-b", "border-l"];
+
+    if (i < colSize) {
+      // If i is in start row
+      delete styling[0];
+    }
+    if (i >= totalGridSpace - colSize) {
+      // If i is in end row
+      delete styling[2];
+    }
+    if (i % colSize == 0) {
+      // If i is in start col
+      delete styling[3];
+    }
+    if ((i + 1) % colSize == 0) {
+      // If i is in end col
+      delete styling[1];
+    }
+
+    return (
+      <div className={styling.join(" ") + " border-zinc-700"} key={i}></div>
+    );
+  };
+
+  // Creating hover animation for grid
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const maskRef = useRef<HTMLDivElement>(null);
+
+  const gridHover = (event: any) => {
+    if (maskRef.current != null) {
+      x.set(event.pageX - maskRef.current.getBoundingClientRect().left);
+      y.set(event.pageY - maskRef.current.getBoundingClientRect().top);
+
+      maskRef.current.style.setProperty("--x", `${x.get()}px`);
+      maskRef.current.style.setProperty("--y", `${y.get()}px`);
+    }
+  };
 
   return (
-    <div ref={constraintsRef} className="w-full h-full">
-      <div className="h-full flex flex-col mt-24 max-w-4xl mx-8 md:flex-row md:mx-32 xl:m-auto  pb-8 gap-16 items-center">
-        <div className="text-center md:text-left">
+    <div className="w-screen max-w-full h-screen flex items-center justify-center relative -translate-y-20">
+      {/* Background grid */}
+      <div
+        ref={maskRef}
+        className="grid grid-cols-6 grid-rows-3 gap-1 w-4/5 h-3/4 md:h-1/2 lg:h-3/4 absolute mask"
+      >
+        {Array.from({ length: totalGridSpace }).map((_, i) => renderGrid(i))}
+      </div>
+      {/* Foreground grid */}
+      <div
+        onMouseMove={gridHover}
+        className="grid items-center grid-cols-6 grid-rows-3 gap-1 w-4/5 h-3/4 md:h-1/2 lg:h-3/4 absolute"
+      >
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          className="col-start-2 md:col-start-1 row-start1 md:row-start-2 col-span-4 md:col-span-1 row-span-1 w-full h-full p-2"
+        >
           <img
-            className="rounded-full max-h-36 mx-auto md:mx-0"
             src={profilePic}
+            className=" rounded-md shadow-md w-full h-full object-cover"
           ></img>
-          <div>
-            <h1 className="text-6xl font-bold py-4">Liang Heng</h1>
-            Hey, I’m a front-end UI UX developer. Currently studying in the
-            university of Melbourne.
-          </div>
+        </motion.div>
+        {/* Emoji Thing */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          className="hidden md:block col-start-2 row-start-2 col-span-1 justify-self-center row-span-1 text-6xl"
+        >
+          📌
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          className=" col-start-2 row-start-2 col-span-4 md:col-start-3 justify-self-center md:justify-self-start text-6xl text-center md:text-[9vw] font-bold"
+        >
+          Liang Heng
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          className=" col-start-2 md:col-start-3 col-span-4 md:col-span-3 row-start-3 self-start max-w-md"
+        >
+          Hey! I'm a uni student focusing on front end web development and UI/UX
+          design.
           <SocialBar xAlign={true}></SocialBar>
-        </div>
-
-        {/* Desktop Display */}
-        <div className="hidden md:block w-full h-full relative">
-          <motion.div
-            drag
-            dragConstraints={constraintsRef}
-            dragMomentum={false}
-            whileDrag={{ scale: 1.05 }}
-            className="absolute top-1/2 left-1/2 h-0"
-          >
-            <div className="max-w-xs -translate-y-1/2 -translate-x-1/2 rotate-12">
-              <ProjectCard
-                points={["React", "TailwindCSS", "GitHub"]}
-                image={project1Img}
-                animation={project1Gif}
-                title="Liangh.me portfolio"
-              />
-            </div>
-          </motion.div>
-
-          <motion.div
-            drag
-            dragConstraints={constraintsRef}
-            dragMomentum={false}
-            whileDrag={{ scale: 1.05 }}
-            className="absolute top-1/2 left-1/2 h-0"
-          >
-            <div className="max-w-xs -translate-y-1/2 -translate-x-1/2">
-              <ProjectCard
-                points={["React", "TailwindCSS", "GitHub"]}
-                image={project1Img}
-                animation={project1Gif}
-                title="Liangh.me portfolio"
-              />
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Mobile Display */}
-        <div className="max-w-xs md:hidden">
-          <ProjectCard
-            points={["React", "TailwindCSS", "GitHub"]}
-            image={project1Img}
-            animation={project1Gif}
-            title="Liangh.me portfolio"
-          />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

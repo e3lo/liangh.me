@@ -1,7 +1,7 @@
 import { motion, useAnimate } from "framer-motion";
 import { useState } from "react";
 
-import backCover from "../assets/cardBg.png"; // 5:6 aspect ratio
+import backCover from "../../assets/cardBg.png"; // 5:6 aspect ratio
 
 interface Props {
   src: string;

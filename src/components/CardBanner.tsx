@@ -1,6 +1,6 @@
 import project1 from "../assets/project1.jpg"; //5:6 aspect ratio
 
-import ImageCard from "./ImageCard";
+import ImageCard from "./parts/ImageCard";
 
 const CardBanner = () => {
   return (
