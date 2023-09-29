@@ -46,11 +46,11 @@ const HeroBanner = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          className="col-start-2 md:col-start-1 row-start1 md:row-start-2 col-span-4 md:col-span-1 row-span-1"
+          className="col-start-2 md:col-start-1 row-start1 md:row-start-2 col-span-4 md:col-span-1 row-span-1 w-full h-full p-2"
         >
           <img
             src={profilePic}
-            className=" rounded-md max-w-full max-h-full shadow-md p-4"
+            className=" rounded-md shadow-md w-full h-full object-cover"
           ></img>
         </motion.div>
         {/* Emoji Thing */}
