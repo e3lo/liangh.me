@@ -1,9 +1,10 @@
 import NavigationBar from "../components/parts/NavigationBar";
+import ComingSoon from "../components/ComingSoon";
 function Achievements() {
   return (
     <>
       <NavigationBar />
-      <h1 className="text-3xl font-bold underline"> Hello World</h1>
+      <ComingSoon>I am coming soon!</ComingSoon>
     </>
   );
 }
