@@ -1,13 +1,16 @@
 import profilePic from "../assets/profilePic.jpg";
 import SocialBar from "./parts/SocialBar";
+import "./HeroBanner.css";
 
-import { motion } from "framer-motion";
+import { motion, useMotionValue } from "framer-motion";
+import { useRef } from "react";
 
 const HeroBanner = () => {
   const rowSize = 3;
   const colSize = 6;
   const totalGridSpace = rowSize * colSize;
 
+  // Rendering the grid
   const renderGrid = (i: number) => {
     const styling = ["border-t", "border-r", "border-b", "border-l"];
 
@@ -33,14 +36,36 @@ const HeroBanner = () => {
     );
   };
 
+  // Creating hover animation for grid
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const maskRef = useRef<HTMLDivElement>(null);
+
+  const gridHover = (event: any) => {
+    if (maskRef.current != null) {
+      x.set(event.pageX - maskRef.current.getBoundingClientRect().left);
+      y.set(event.pageY - maskRef.current.getBoundingClientRect().top);
+
+      maskRef.current.style.setProperty("--x", `${x.get()}px`);
+      maskRef.current.style.setProperty("--y", `${y.get()}px`);
+    }
+  };
+
   return (
     <div className="w-screen max-w-full h-screen flex items-center justify-center relative -translate-y-20">
       {/* Background grid */}
-      <div className="grid grid-cols-6 grid-rows-3 gap-1 w-4/5 h-3/4 md:h-1/2 lg:h-3/4 absolute">
+      <div
+        ref={maskRef}
+        className="grid grid-cols-6 grid-rows-3 gap-1 w-4/5 h-3/4 md:h-1/2 lg:h-3/4 absolute mask"
+      >
         {Array.from({ length: totalGridSpace }).map((_, i) => renderGrid(i))}
       </div>
       {/* Foreground grid */}
-      <div className="grid items-center grid-cols-6 grid-rows-3 gap-1 w-4/5 h-3/4 md:h-1/2 lg:h-3/4 absolute">
+      <div
+        onMouseMove={gridHover}
+        className="grid items-center grid-cols-6 grid-rows-3 gap-1 w-4/5 h-3/4 md:h-1/2 lg:h-3/4 absolute"
+      >
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
