@@ -4,7 +4,7 @@ import CardBanner from "../components/CardBanner";
 
 function Home() {
   return (
-    <div className="bg-zinc-800">
+    <div className="bg-zinc-900">
       <NavigationBar />
       <HeroBanner />
 
