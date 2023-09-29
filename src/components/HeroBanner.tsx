@@ -2,8 +2,6 @@ import profilePic from "../assets/profilePic.jpg";
 import SocialBar from "./parts/SocialBar";
 
 import { motion } from "framer-motion";
-import { useRef } from "react";
-import { render } from "react-dom";
 
 const HeroBanner = () => {
   const rowSize = 3;
@@ -31,7 +29,7 @@ const HeroBanner = () => {
     }
 
     return (
-      <div className={styling.join(" ") + " border-zinc-600"} key={i}></div>
+      <div className={styling.join(" ") + " border-zinc-700"} key={i}></div>
     );
   };
 
