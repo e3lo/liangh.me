@@ -4,14 +4,16 @@ import CardBanner from "../components/CardBanner";
 
 function Home() {
   return (
-    <div className="bg-zinc-900">
+    <>
       <NavigationBar />
-      <HeroBanner />
+      <body className="bg-zinc-900">
+        <HeroBanner />
 
-      <div className="flex justify-center">
-        <CardBanner />
-      </div>
-    </div>
+        <div className="flex justify-center">
+          <CardBanner />
+        </div>
+      </body>
+    </>
   );
 }
 
