@@ -6,13 +6,13 @@ function Home() {
   return (
     <>
       <NavigationBar />
-      <body className="bg-zinc-900">
+      <div className="bg-zinc-900">
         <HeroBanner />
 
         <div className="flex justify-center">
           <CardBanner />
         </div>
-      </body>
+      </div>
     </>
   );
 }
