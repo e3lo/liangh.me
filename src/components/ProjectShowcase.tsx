@@ -1,6 +1,7 @@
 import StickyProjectDisplay from "./parts/StickyProjectDisplay";
 
 import casIndexImg1 from "../assets/cardBg.png";
+import testImg from "../assets/project2.jpg";
 
 const CardBanner = () => {
   return (
@@ -14,12 +15,14 @@ const CardBanner = () => {
       </div>
       <StickyProjectDisplay
         title="CasIndex"
+        key="casindex"
         description="A sleek responsive e-commerce website designed to promote and sell VCE assitant tools"
         img1={casIndexImg1}
-        img2={casIndexImg1}
+        img2={testImg}
       />
       <StickyProjectDisplay
         title="A blue whale"
+        key="bluewhale"
         description="A sleek responsive e-commerce website designed to promote and sell VCE assitant tools"
         img1={casIndexImg1}
         img2={casIndexImg1}
