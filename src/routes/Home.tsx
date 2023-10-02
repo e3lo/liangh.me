@@ -1,13 +1,13 @@
 import NavigationBar from "../components/parts/NavigationBar";
 import HeroBanner from "../components/HeroBanner";
-import StickyBanner from "../components/StickyBanner";
+import ProjectShowcase from "../components/ProjectShowcase";
 
 function Home() {
   return (
     <>
       <NavigationBar />
       <HeroBanner />
-      <StickyBanner />
+      <ProjectShowcase />
       <HeroBanner />
     </>
   );
