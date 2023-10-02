@@ -1,21 +1,8 @@
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { useRef, useState } from "react";
-
 import StickyProjectDisplay from "./parts/StickyProjectDisplay";
 
 import casIndexImg1 from "../assets/cardBg.png";
 
 const CardBanner = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: scrollRef,
-  });
-
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    console.log("Page scroll: ", latest);
-  });
-
   return (
     <>
       <div className=" flex flex-col m-auto items-center max-w-sm text-center gap-2 mt-16 my-8">
