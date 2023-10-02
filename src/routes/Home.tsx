@@ -1,13 +1,14 @@
 import NavigationBar from "../components/parts/NavigationBar";
 import HeroBanner from "../components/HeroBanner";
+import StickyBanner from "../components/StickyBanner";
 
 function Home() {
   return (
     <>
       <NavigationBar />
-      <div className="bg-zinc-900">
-        <HeroBanner />
-      </div>
+      <HeroBanner />
+      <StickyBanner />
+      <HeroBanner />
     </>
   );
 }
