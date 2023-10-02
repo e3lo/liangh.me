@@ -3,6 +3,8 @@ import { useRef, useState } from "react";
 
 import StickyProjectDisplay from "./parts/StickyProjectDisplay";
 
+import casIndexImg1 from "../assets/cardBg.png";
+
 const CardBanner = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -23,8 +25,18 @@ const CardBanner = () => {
           thing (hopefully)
         </p>
       </div>
-      <StickyProjectDisplay />
-      <StickyProjectDisplay />
+      <StickyProjectDisplay
+        title="CasIndex"
+        description="A sleek responsive e-commerce website designed to promote and sell VCE assitant tools"
+        img1={casIndexImg1}
+        img2={casIndexImg1}
+      />
+      <StickyProjectDisplay
+        title="A blue whale"
+        description="A sleek responsive e-commerce website designed to promote and sell VCE assitant tools"
+        img1={casIndexImg1}
+        img2={casIndexImg1}
+      />
     </>
   );
 };
