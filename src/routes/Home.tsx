@@ -8,7 +8,6 @@ function Home() {
       <NavigationBar />
       <HeroBanner />
       <ProjectShowcase />
-      <HeroBanner />
     </>
   );
 }

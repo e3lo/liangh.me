@@ -7,23 +7,27 @@ const CardBanner = () => {
   return (
     <>
       <div className=" flex flex-col m-auto items-center max-w-sm text-center gap-2 mt-16 my-8">
-        <h1 className=" text-4xl font-bold">Projects</h1>
-        <p>
-          Creating stunning interfaces that captures your attention is a good
-          thing (hopefully)
-        </p>
+        <h1 className=" text-4xl font-bold">Featured Projects</h1>
+        <p>Some of my best and most recent works. </p>
       </div>
       <StickyProjectDisplay
         title="CasIndex"
-        key="casindex"
+        urlPath="CasIndex"
         description="A sleek responsive e-commerce website designed to promote and sell VCE assitant tools"
         img1={casIndexImg1}
         img2={testImg}
       />
       <StickyProjectDisplay
-        title="A blue whale"
-        key="bluewhale"
-        description="A sleek responsive e-commerce website designed to promote and sell VCE assitant tools"
+        title="Albion Profit Calculator"
+        urlPath="AlbionProfitCalc"
+        description="A modern calculation tool designed to maximis profits in game using public API data"
+        img1={casIndexImg1}
+        img2={casIndexImg1}
+      />
+      <StickyProjectDisplay
+        title="CulinaryCode"
+        urlPath="CulinaryCode"
+        description="A minimalistic website for easy no-nonsense recipes"
         img1={casIndexImg1}
         img2={casIndexImg1}
       />
