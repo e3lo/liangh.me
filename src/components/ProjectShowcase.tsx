@@ -8,7 +8,7 @@ const CardBanner = () => {
     <>
       <div className=" flex flex-col m-auto items-center max-w-sm text-center gap-2 mt-16 my-8">
         <h1 className=" text-4xl font-bold">Featured Projects</h1>
-        <p>Some of my best and most recent works. </p>
+        <p>My best and most recent works. </p>
       </div>
       <StickyProjectDisplay
         title="CasIndex"
