@@ -6,6 +6,9 @@ import casIndexImg2 from "../assets/CasIndex/thumbnail2.png";
 import CCImg1 from "../assets/CulinaryCode/thumbnail1.png";
 import CCImg2 from "../assets/CulinaryCode/thumbnail2.png";
 
+import HMImg1 from "../assets/HackMelbourne/thumbnail1.png";
+import HMImg2 from "../assets/HackMelbourne/thumbnail2.png";
+
 const CardBanner = () => {
   return (
     <>
@@ -17,8 +20,8 @@ const CardBanner = () => {
         title="HackMelbourne"
         urlPath="HackMelbourne"
         description="Website Director for HackMelbourne. Led a team of 4 to create a website using React (TSX), TailwindCSS and designed by me."
-        img1={casIndexImg1}
-        img2={casIndexImg1}
+        img1={HMImg1}
+        img2={HMImg2}
       />
       <StickyProjectDisplay
         title="CasIndex"
