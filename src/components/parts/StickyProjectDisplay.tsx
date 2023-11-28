@@ -41,7 +41,7 @@ const StickyProjectDisplay = ({
           <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-center">
             {title}
           </h1>
-          <p className=" max-w-sm text-center">{description}</p>
+          <p className=" max-w-md text-center">{description}</p>
           <Link
             to={`/${urlPath}`}
             className=" p-2 font-bold hover:text-green-400 transition" // Hover effect change background aswell!
