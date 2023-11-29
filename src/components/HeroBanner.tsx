@@ -58,10 +58,10 @@ const HeroBanner = () => {
     target: ref,
   });
 
-  let scroll1Y = useTransform(scrollYProgress, [0, 0.8], ["-150%", "0%"]);
+  let scroll1Y = useTransform(scrollYProgress, [0, 0.8], ["150%", "0%"]);
   let scoll1Opacity = useTransform(scrollYProgress, [0.2, 0.8], [0, 1]);
 
-  let scroll2Y = useTransform(scrollYProgress, [0, 0.8], ["0%", "150%"]);
+  let scroll2Y = useTransform(scrollYProgress, [0, 0.8], ["0%", "-150%"]);
   let scoll2Opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   return (
