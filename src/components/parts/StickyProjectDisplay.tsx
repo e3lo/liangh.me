@@ -57,11 +57,11 @@ const StickyProjectDisplay = ({
           className="grid md:grid-cols-2 max-w-2xl lg:max-w-4xl w-full gap-16 lg:gap-48 h-full md:max-h-96 z-10"
         >
           <img
-            className="bg-zinc-100 rounded-md w-full h-full object-cover"
+            className="bg-zinc-100 rounded-md w-full h-full object-cover border"
             src={img1}
           ></img>
           <img
-            className="bg-zinc-100 rounded-md w-full h-full object-cover"
+            className="bg-zinc-100 rounded-md w-full h-full object-cover border"
             src={img2}
           ></img>
         </motion.div>
