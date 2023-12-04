@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const NavigationBar = () => {
   const location = useLocation();
@@ -96,13 +97,8 @@ const NavigationBar = () => {
             />
           </svg>
         </button>
-        <div
-          className={
-            (!mobileMenu && "hidden ") +
-            " w-full text-center md:flex md:w-auto gap-6"
-          }
-        >
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-zinc-200 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent">
+        <div className={"hidden w-full text-center md:flex md:w-auto gap-6"}>
+          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent">
             <Link
               onMouseEnter={() => setBorderColor("blue")}
               onMouseLeave={() => setBorderColor("grey")}
@@ -130,6 +126,46 @@ const NavigationBar = () => {
           </ul>
         </div>
       </div>
+      {/* Mobile Nav */}
+      {mobileMenu && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          className="md:hidden flex flex-col items-center justify-center w-screen h-screen absolute bg-zinc-900 font-medium text-3xl gap-8"
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, x: 100 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ delay: 0.2 }}
+            className="mt-auto"
+          >
+            <Link to={"/Achievements"}>Acheivements</Link>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, x: 100 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ delay: 0.3 }}
+          >
+            <Link to={`/Projects`}>Projects</Link>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, x: 100 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ delay: 0.4 }}
+          >
+            <Link to={`/Contact`}>Contact</Link>
+          </motion.div>
+          <motion.button
+            className="mt-auto mb-16 underline"
+            onClick={() => {
+              setMobileMenu(false);
+            }}
+          >
+            Back
+          </motion.button>
+        </motion.div>
+      )}
     </nav>
   );
 };
