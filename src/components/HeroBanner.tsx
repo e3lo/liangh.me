@@ -32,7 +32,7 @@ const HeroBanner = () => {
     }
 
     return (
-      <div className={styling.join(" ") + " border-zinc-700"} key={i}></div>
+      <div className={styling.join(" ") + " border-zinc-600"} key={i}></div>
     );
   };
 
@@ -96,7 +96,18 @@ const HeroBanner = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             className="hidden md:block col-start-2 row-start-2 col-span-1 justify-self-center row-span-1 text-6xl"
           >
-            📌
+            <motion.div
+              style={{ y: scroll1Y, opacity: scoll1Opacity }}
+              className="absolute"
+            >
+              💻
+            </motion.div>
+            <motion.div
+              style={{ y: scroll2Y, opacity: scoll2Opacity }}
+              className=""
+            >
+              👉
+            </motion.div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -119,7 +130,7 @@ const HeroBanner = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            className=" col-start-2 md:col-start-3 col-span-4 md:col-span-3 row-start-3 self-start max-w-md"
+            className=" col-start-2 md:col-start-3 col-span-4 md:col-span-3 row-start-3 self-start max-w-md z-10"
           >
             Hey! I'm a uni student focusing on front end web development and
             UI/UX design.

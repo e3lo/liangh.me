@@ -1,5 +1,9 @@
 .mask {
-    --x: 50%;
-    --y: 50%;
-    mask-image: radial-gradient( circle at var(--x) var(--y),black 0%, transparent);
+  --x: 50%;
+  --y: 50%;
+  mask-image: radial-gradient(
+    circle at var(--x) var(--y),
+    black 0%,
+    transparent
+  );
 }
