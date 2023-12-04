@@ -128,7 +128,7 @@ const HeroBanner = () => {
         </div>
         {/* Extra space */}
       </div>
-      <div className="w-screen h-[50vh] md:h-screen"></div>
+      <div className="w-screen h-[50vh] md:h-screen max-w-full"></div>
     </div>
   );
 };
