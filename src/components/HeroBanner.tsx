@@ -45,10 +45,8 @@ const HeroBanner = () => {
   const gridHover = (event: any) => {
     if (maskRef.current != null) {
       x.set(event.pageX - maskRef.current.getBoundingClientRect().left);
-      y.set(event.pageY - maskRef.current.getBoundingClientRect().top);
 
       maskRef.current.style.setProperty("--x", `${x.get()}px`);
-      maskRef.current.style.setProperty("--y", `${y.get()}px`);
     }
   };
 
