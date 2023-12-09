@@ -1,3 +1,7 @@
+import SkillIcon from "./parts/SkillIcon";
+
+import conveyorBelt from "../assets/SushiTrain/belt.png";
+
 const SkillsSection = () => {
   return (
     <section className="flex flex-row m-auto items-center gap-2 mt-24 my-8">
@@ -7,12 +11,12 @@ const SkillsSection = () => {
           <p className="">Things I can do without ChatGPT (most of the time)</p>
         </div>
       </div>
-      <div className="w-2/3 overflow-clip flex items-end justify-end">
-        <svg width="1000" height="500">
-          <rect width="1000" height="200" x="0" y="0" fill="red" />
-          <rect width="200" height="500" x="0" y="0" fill="red" />
-          <rect width="1000" height="200" x="0" y="300" fill="red" />
-        </svg>
+      <div className="w-2/3 overflow-clip flex flex-col items-end justify-end">
+        <img
+          src={conveyorBelt}
+          className="h-[500px] w-[1000] object-cover object-left"
+        ></img>
+        <SkillIcon title="Hi" body="Hello" iconPath="no" />
       </div>
     </section>
   );
