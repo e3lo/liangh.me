@@ -1,5 +1,5 @@
-import { useRef, useEffect } from "react";
-import { useMotionValue, motion, useAnimationFrame } from "framer-motion";
+import { useRef } from "react";
+import { useAnimationFrame } from "framer-motion";
 
 interface Props {
   title: string;
@@ -10,22 +10,26 @@ interface Props {
 const SkillIcon = ({}: Props) => {
   const ref = useRef<HTMLDivElement>(null);
 
-  let x = 0;
-  let y = 0;
+  let x = 11;
+  let y = -139;
 
-  // useAnimationFrame((time, delta) => {
-  //   if (ref.current != null) {
-  //     if (x > -936 && x < 64) {
-  //       x--;
-  //     } else if (x == -936) {
-  //       y--;
-  //     } else if (x == 64) {
-  //       y;
-  //     }
+  useAnimationFrame((time, delta) => {
+    if (ref.current != null) {
+      if (x == 11) {
+        y--;
+      } else if (x == 1000) {
+        y++;
+      }
 
-  //     ref.current.style.transform = `translate(${x}px, ${y}px)`;
-  //   }
-  // });
+      if (y == -139) {
+        x--;
+      } else if (y == -489) {
+        x++;
+      }
+
+      ref.current.style.transform = `translate(${x}px, ${y}px)`;
+    }
+  });
 
   return (
     <div
