@@ -13,13 +13,19 @@ const SkillIcon = ({}: Props) => {
   let x = 0;
   let y = 0;
 
-  useAnimationFrame((time, delta) => {
-    if (ref.current != null) {
-      x--;
-      y--;
-      ref.current.style.transform = `translate(${x}px, ${y}px)`;
-    }
-  });
+  // useAnimationFrame((time, delta) => {
+  //   if (ref.current != null) {
+  //     if (x > -936 && x < 64) {
+  //       x--;
+  //     } else if (x == -936) {
+  //       y--;
+  //     } else if (x == 64) {
+  //       y;
+  //     }
+
+  //     ref.current.style.transform = `translate(${x}px, ${y}px)`;
+  //   }
+  // });
 
   return (
     <div
