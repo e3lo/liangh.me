@@ -11,8 +11,8 @@ const SkillsSection = () => {
           <p className="">Things I can do without ChatGPT (most of the time)</p>
         </div>
       </div>
-      <div className="w-1/2 md:w-2/3 flex flex-col justify-end pl-8">
-        <div className="h-[500px] w-[1000px] self-start 2xl:self-end">
+      <div className="w-1/2 md:w-2/3 flex flex-col justify-end pl-8 overflow-hidden">
+        <div className="h-[500px] w-[1000px] self-start 2xl:self-end ">
           <img
             src={conveyorBelt}
             className="h-[500px] w-[1000px] max-w-none object-cover object-left"
