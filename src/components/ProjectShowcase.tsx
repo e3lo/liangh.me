@@ -1,16 +1,16 @@
-import StickyProjectDisplay from "./parts/StickyProjectDisplay";
+import StickyProjectDisplay from './parts/StickyProjectDisplay'
 
 // import casIndexImg1 from "../assets/CasIndex/thumbnail1.png";
 // import casIndexImg2 from "../assets/CasIndex/thumbnail2.png";
 
-import GSImg1 from "../assets/GroupSpace/Login.png";
-import GSImg2 from "../assets/GroupSpace/HomePage.png";
+import GSImg1 from '../assets/GroupSpace/Login.png'
+import GSImg2 from '../assets/GroupSpace/HomePage.png'
 
-import CCImg1 from "../assets/CulinaryCode/thumbnail1.png";
-import CCImg2 from "../assets/CulinaryCode/thumbnail2.png";
+import CCImg1 from '../assets/CulinaryCode/thumbnail1.png'
+import CCImg2 from '../assets/CulinaryCode/thumbnail2.png'
 
-import HMImg1 from "../assets/HackMelbourne/thumbnail1.png";
-import HMImg2 from "../assets/HackMelbourne/thumbnail2.png";
+import HMImg1 from '../assets/HackMelbourne/thumbnail1.png'
+import HMImg2 from '../assets/HackMelbourne/thumbnail2.png'
 
 const CardBanner = () => {
   return (
@@ -21,27 +21,27 @@ const CardBanner = () => {
       </div>
       <StickyProjectDisplay
         title="HackMelbourne"
-        urlPath="HackMelbourne"
+        urlPath="project/HackMelbourne"
         description="Website Director for HackMelbourne. Led a team of 4 to create a website using React (TSX), TailwindCSS and designed by me."
         img1={HMImg1}
         img2={HMImg2}
       />
       <StickyProjectDisplay
         title="GroupSpace"
-        urlPath="GroupSpace"
+        urlPath="project/GroupSpace"
         description="A web application aimed at simplifying the group finding process in universities. Developed for a 48Hr Hackathon with 4 other developers using React front-end and Firebase-backend"
         img1={GSImg1}
         img2={GSImg2}
       />
       <StickyProjectDisplay
         title="CulinaryCode"
-        urlPath="CulinaryCode"
+        urlPath="project/CulinaryCode"
         description="First place minimalistic website for cooking recipes created for a Hackathon. Made with VUE.JS and vanilla css and designed by me "
         img1={CCImg1}
         img2={CCImg2}
       />
     </>
-  );
-};
+  )
+}
 
-export default CardBanner;
+export default CardBanner

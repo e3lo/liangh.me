@@ -15,13 +15,21 @@ import Contact from "./routes/Contact.tsx";
 import Projects from "./routes/Projects.tsx";
 import NotFound from "./routes/NotFound.tsx";
 
+import CulinaryCode from "./routes/projects/CulinaryCode.tsx";
+import HackMelbourne from "./routes/projects/HackMelbourne.tsx";
+import GroupSpace from "./routes/projects/GroupSpace.tsx";
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="achievements" element={<Achievements />} />
       <Route path="contact" element={<Contact />} />
-      <Route path="projects" element={<Projects />} />
+      <Route path="project" element={<Projects />}>
+        <Route path="CulinaryCode" element={<CulinaryCode />} />
+        <Route path="HackMelbourne" element={<HackMelbourne />} />
+        <Route path="GroupSpace" element={<GroupSpace />} />
+      </Route>
       <Route path="*" element={<NotFound />} />
     </Route>
   )
