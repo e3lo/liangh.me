@@ -1,15 +1,15 @@
-import HeroBanner from "../components/HeroBanner";
-import ProjectShowcase from "../components/ProjectShowcase";
-import SkillsSection from "../components/SkillsSection";
+import HeroBanner from '../components/HeroBanner'
+import ProjectShowcase from '../components/ProjectShowcase'
+// import SkillsSection from '../components/SkillsSection'
 
 function Home() {
   return (
     <>
       <HeroBanner />
       <ProjectShowcase />
-      <SkillsSection />
+      {/* <SkillsSection /> */}
     </>
-  );
+  )
 }
 
-export default Home;
+export default Home
