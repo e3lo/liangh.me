@@ -32,7 +32,7 @@ const HeroBanner = () => {
     }
 
     return (
-      <div className={styling.join(" ") + " border-zinc-700"} key={i}></div>
+      <div className={styling.join(" ") + " border-zinc-600"} key={i}></div>
     );
   };
 
@@ -45,10 +45,8 @@ const HeroBanner = () => {
   const gridHover = (event: any) => {
     if (maskRef.current != null) {
       x.set(event.pageX - maskRef.current.getBoundingClientRect().left);
-      y.set(event.pageY - maskRef.current.getBoundingClientRect().top);
 
       maskRef.current.style.setProperty("--x", `${x.get()}px`);
-      maskRef.current.style.setProperty("--y", `${y.get()}px`);
     }
   };
 
@@ -58,10 +56,10 @@ const HeroBanner = () => {
     target: ref,
   });
 
-  let scroll1Y = useTransform(scrollYProgress, [0, 0.8], ["-150%", "0%"]);
+  let scroll1Y = useTransform(scrollYProgress, [0, 0.8], ["150%", "0%"]);
   let scoll1Opacity = useTransform(scrollYProgress, [0.2, 0.8], [0, 1]);
 
-  let scroll2Y = useTransform(scrollYProgress, [0, 0.8], ["0%", "150%"]);
+  let scroll2Y = useTransform(scrollYProgress, [0, 0.8], ["0%", "-150%"]);
   let scoll2Opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   return (
@@ -96,7 +94,18 @@ const HeroBanner = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             className="hidden md:block col-start-2 row-start-2 col-span-1 justify-self-center row-span-1 text-6xl"
           >
-            📌
+            <motion.div
+              style={{ y: scroll1Y, opacity: scoll1Opacity }}
+              className="absolute"
+            >
+              💻
+            </motion.div>
+            <motion.div
+              style={{ y: scroll2Y, opacity: scoll2Opacity }}
+              className=""
+            >
+              👉
+            </motion.div>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -119,7 +128,7 @@ const HeroBanner = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            className=" col-start-2 md:col-start-3 col-span-4 md:col-span-3 row-start-3 self-start max-w-md"
+            className=" col-start-2 md:col-start-3 col-span-4 md:col-span-3 row-start-3 self-start max-w-md z-10"
           >
             Hey! I'm a uni student focusing on front end web development and
             UI/UX design.
@@ -128,7 +137,7 @@ const HeroBanner = () => {
         </div>
         {/* Extra space */}
       </div>
-      <div className="w-screen h-[50vh] md:h-screen"></div>
+      <div className="w-screen h-[50vh] md:h-screen max-w-full"></div>
     </div>
   );
 };
