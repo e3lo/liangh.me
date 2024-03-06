@@ -1,10 +1,8 @@
-import NavigationBar from "../components/parts/NavigationBar";
-import ComingSoon from "../components/ComingSoon";
+import { Outlet } from "react-router-dom";
 function Projects() {
   return (
     <>
-      <NavigationBar />
-      <ComingSoon>I am coming soon!</ComingSoon>
+      <Outlet></Outlet>
     </>
   );
 }
