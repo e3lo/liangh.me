@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
-import SkillIcon from "./parts/SkillIcon";
+import SkillIcon from './parts/SkillIcon'
 
-import conveyorBelt from "../assets/SushiTrain/belt.png";
+import conveyorBelt from '../assets/SushiTrain/belt.png'
 
 const SkillsSection = () => {
   return (
@@ -54,7 +54,7 @@ const SkillsSection = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default SkillsSection;
+export default SkillsSection

@@ -1,70 +1,70 @@
-import profilePic from "../assets/profilePic.jpg";
-import SocialBar from "./parts/SocialBar";
-import "./HeroBanner.css";
+import profilePic from '../assets/profilePic.jpg'
+import SocialBar from './parts/SocialBar'
+import './HeroBanner.css'
 
-import { motion, useMotionValue, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { motion, useMotionValue, useScroll, useTransform } from 'framer-motion'
+import { useRef } from 'react'
 
 const HeroBanner = () => {
-  const rowSize = 3;
-  const colSize = 6;
-  const totalGridSpace = rowSize * colSize;
+  const rowSize = 3
+  const colSize = 6
+  const totalGridSpace = rowSize * colSize
 
   // Rendering the grid
   const renderGrid = (i: number) => {
-    const styling = ["border-t", "border-r", "border-b", "border-l"];
+    const styling = ['border-t', 'border-r', 'border-b', 'border-l']
 
     if (i < colSize) {
       // If i is in start row
-      delete styling[0];
+      delete styling[0]
     }
     if (i >= totalGridSpace - colSize) {
       // If i is in end row
-      delete styling[2];
+      delete styling[2]
     }
     if (i % colSize == 0) {
       // If i is in start col
-      delete styling[3];
+      delete styling[3]
     }
     if ((i + 1) % colSize == 0) {
       // If i is in end col
-      delete styling[1];
+      delete styling[1]
     }
 
     return (
-      <div className={styling.join(" ") + " border-zinc-600"} key={i}></div>
-    );
-  };
+      <div className={styling.join(' ') + ' border-zinc-600'} key={i}></div>
+    )
+  }
 
   // Creating hover animation for grid
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
+  const x = useMotionValue(0)
+  // const y = useMotionValue(0);
 
-  const maskRef = useRef<HTMLDivElement>(null);
+  const maskRef = useRef<HTMLDivElement>(null)
 
   const gridHover = (event: any) => {
     if (maskRef.current != null) {
-      x.set(event.pageX - maskRef.current.getBoundingClientRect().left);
+      x.set(event.pageX - maskRef.current.getBoundingClientRect().left)
 
-      maskRef.current.style.setProperty("--x", `${x.get()}px`);
+      maskRef.current.style.setProperty('--x', `${x.get()}px`)
     }
-  };
+  }
 
   //Scroll Hijacking
-  let ref = useRef<HTMLDivElement>(null);
+  let ref = useRef<HTMLDivElement>(null)
   let { scrollYProgress } = useScroll({
     target: ref,
-  });
+  })
 
-  let scroll1Y = useTransform(scrollYProgress, [0, 0.8], ["150%", "0%"]);
-  let scoll1Opacity = useTransform(scrollYProgress, [0.2, 0.8], [0, 1]);
+  let scroll1Y = useTransform(scrollYProgress, [0, 0.8], ['150%', '0%'])
+  let scoll1Opacity = useTransform(scrollYProgress, [0.2, 0.8], [0, 1])
 
-  let scroll2Y = useTransform(scrollYProgress, [0, 0.8], ["0%", "-150%"]);
-  let scoll2Opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+  let scroll2Y = useTransform(scrollYProgress, [0, 0.8], ['0%', '-150%'])
+  let scoll2Opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0])
 
   return (
     <div ref={ref}>
-      {" "}
+      {' '}
       <div className="w-screen max-w-full h-screen flex items-center justify-center sticky top-0">
         {/* Background grid */}
         <div
@@ -139,7 +139,7 @@ const HeroBanner = () => {
       </div>
       <div className="w-screen h-[50vh] md:h-screen max-w-full"></div>
     </div>
-  );
-};
+  )
+}
 
-export default HeroBanner;
+export default HeroBanner
