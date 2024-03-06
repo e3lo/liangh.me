@@ -112,12 +112,43 @@ const HackMelbourne = () => {
     description: [
       {
         title: 'Getting started',
-        description: 'Hi',
+        description:
+          'At the start the HM website had an outdated style and lacked any visual identity. With the increasing amount of youths utilising and preferring a dark themed website. I made the decision to completely redesign the website from scratch',
         image: {
           src: img1,
           alt: 'hi',
         },
         style: 'normal',
+      },
+      {
+        title: 'Selecting which frameworks',
+        description:
+          'Originally the website used vanilla CSS with React using Javascript. As one of my goals was to have the project easily collaboratable aswell as providing both me and my soon-to-be teammates practical experience, I had decided to go with typescript and tailwindCSS to prevent any naming inconsistencies in CSS',
+        image: {
+          src: img1,
+          alt: 'hi',
+        },
+        style: 'reverse',
+      },
+      {
+        title: 'A collaborative environment',
+        description:
+          'For HackMelbourne, I had set up CI/CD pipelines for deployment aswell as simple automated tests for every PR. We initially also had to request a review before submitting the PR, however it felt unecessary for the small scale of our website so we removed the idea',
+        image: {
+          src: img1,
+          alt: 'hi',
+        },
+        style: 'normal',
+      },
+      {
+        title: 'Problems faced',
+        description:
+          'One of the problems I faced as the website director was maintaining the code quality across the repo, I initially just fixed the code myself when i saw an issue, however i quickly realised that...',
+        image: {
+          src: img1,
+          alt: 'hi',
+        },
+        style: 'reverse',
       },
     ],
   }
