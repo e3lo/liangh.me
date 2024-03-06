@@ -34,7 +34,7 @@ const SkillIcon = ({ title, delay }: Props) => {
 
   let [x, y] = initialPos(delay)
 
-  useAnimationFrame((time, delta) => {
+  useAnimationFrame(() => {
     if (ref.current != null) {
       if (y == -139) {
         x--
