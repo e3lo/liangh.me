@@ -1,7 +1,10 @@
 import StickyProjectDisplay from "./parts/StickyProjectDisplay";
 
-import casIndexImg1 from "../assets/CasIndex/thumbnail1.png";
-import casIndexImg2 from "../assets/CasIndex/thumbnail2.png";
+// import casIndexImg1 from "../assets/CasIndex/thumbnail1.png";
+// import casIndexImg2 from "../assets/CasIndex/thumbnail2.png";
+
+import GSImg1 from "../assets/GroupSpace/Login.png";
+import GSImg2 from "../assets/GroupSpace/HomePage.png";
 
 import CCImg1 from "../assets/CulinaryCode/thumbnail1.png";
 import CCImg2 from "../assets/CulinaryCode/thumbnail2.png";
@@ -24,11 +27,11 @@ const CardBanner = () => {
         img2={HMImg2}
       />
       <StickyProjectDisplay
-        title="CasIndex"
-        urlPath="CasIndex"
-        description="A sleek responsive e-commerce website designed to promote and sell VCE assitant tools. Made with EditorX by WIX and designed by me"
-        img1={casIndexImg1}
-        img2={casIndexImg2}
+        title="GroupSpace"
+        urlPath="GroupSpace"
+        description="A web application aimed at simplifying the group finding process in universities. Developed for a 48Hr Hackathon with 4 other developers using React front-end and Firebase-backend"
+        img1={GSImg1}
+        img2={GSImg2}
       />
       <StickyProjectDisplay
         title="CulinaryCode"

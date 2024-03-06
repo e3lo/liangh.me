@@ -38,7 +38,7 @@ const StickyProjectDisplay = ({
           transition={{ duration: 0.4 }}
           className="flex flex-col items-center mb-4 z-10 p-2"
         >
-          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-center">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-center mb-4">
             {title}
           </h1>
           <p className=" max-w-md text-center">{description}</p>
@@ -49,7 +49,6 @@ const StickyProjectDisplay = ({
             <p>--{">"} Learn more</p>
           </Link>
         </motion.div>
-
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
