@@ -9,8 +9,9 @@ interface description {
 }
 
 const DescriptionBox = ({ title, description, image, style }: description) => {
-  const direction = style == 'reverse' ? 'flex-row-reverse' : ''
-  const translation = style == 'reverse' ? 'translate-x-16' : '-translate-x-16'
+  const direction = style == 'reverse' ? 'md:flex-row-reverse' : ''
+  const translation =
+    style == 'reverse' ? 'md:translate-x-16' : 'md:-translate-x-16'
 
   return (
     <section
@@ -24,7 +25,7 @@ const DescriptionBox = ({ title, description, image, style }: description) => {
         <div
           className={`bg-neutral-100 p-8 rounded text-neutral-900 ${translation}`}
         >
-          <h2 className="text-4xl font-bold">{title}</h2>
+          <h2 className="text-4xl font-bold mb-2">{title}</h2>
           <p>{description}</p>
         </div>
       </div>
