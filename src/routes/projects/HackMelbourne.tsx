@@ -1,7 +1,7 @@
 import HeroProject from '../../components/project/HeroProject'
 import Gallery from '../../components/project/Gallery'
 
-import bgImage from '../../assets/HackMelbourne/WideHome.png'
+import bgImage from '../../assets/HackMelbourne/wideHome.png'
 import DescriptionBox from '../../components/project/DescriptionBox'
 
 import img1 from '../../assets/HackMelbourne/thumbnail1.png'
