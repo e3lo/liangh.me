@@ -1,3 +1,5 @@
+import { useScroll, useTransform, motion } from 'framer-motion'
+
 interface HeroProps {
   title: string
   description: string
@@ -5,6 +7,9 @@ interface HeroProps {
 }
 
 const HeroProject = ({ title, description, bgImage }: HeroProps) => {
+  const { scrollYProgress } = useScroll()
+  let y = useTransform(scrollYProgress, [0, 1], ['0%', '100%'])
+
   return (
     <section className="w-full h-screen overflow-hidden">
       <div
@@ -16,10 +21,11 @@ const HeroProject = ({ title, description, bgImage }: HeroProps) => {
           <p className="max-w-md">{description}</p>
         </div>
       </div>
-      <img
-        className="absolute top-0 w-screen max-w-full h-[150vh] -z-10 object-cover"
+      <motion.img
+        style={{ y }}
+        className="absolute top-0 w-screen max-w-full -z-10 object-cover"
         src={bgImage}
-      ></img>
+      ></motion.img>
     </section>
   )
 }

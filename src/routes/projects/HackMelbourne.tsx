@@ -2,6 +2,9 @@ import HeroProject from '../../components/project/HeroProject'
 import Gallery from '../../components/project/Gallery'
 
 import bgImage from '../../assets/HackMelbourne/WideHome.png'
+import DescriptionBox from '../../components/project/DescriptionBox'
+
+import img1 from '../../assets/HackMelbourne/thumbnail1.png'
 
 export interface ProjectProps {
   hero: {
@@ -15,6 +18,15 @@ export interface ProjectProps {
       title: string
     }[]
   }
+  description: {
+    title: string
+    description: string
+    image: {
+      src: string
+      alt: string
+    }
+    style?: 'normal' | 'reverse'
+  }[]
 }
 
 const HackMelbourne = () => {
@@ -97,11 +109,25 @@ const HackMelbourne = () => {
         },
       ],
     },
+    description: [
+      {
+        title: 'Getting started',
+        description: 'Hi',
+        image: {
+          src: img1,
+          alt: 'hi',
+        },
+        style: 'normal',
+      },
+    ],
   }
   return (
     <>
       <HeroProject {...props.hero}></HeroProject>
       <Gallery {...props.gallery}></Gallery>
+      {props.description.map((item, index) => (
+        <DescriptionBox {...item} key={index}></DescriptionBox>
+      ))}
     </>
   )
 }
