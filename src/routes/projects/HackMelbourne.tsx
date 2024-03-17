@@ -157,6 +157,102 @@ const HackMelbourne = () => {
             </div>
             <img className="w-full h-64"></img>
           </section>
+
+          {/* Assembling a team */}
+          <section className="flex flex-col gap-4">
+            <h2 className=" text-5xl font-display text-center">
+              The beginning of development
+            </h2>
+            <div className="text-lg">
+              At the start our teams workflow usually involved me creating the
+              designs of a new component, then I would present it during our
+              sprint meetings and then we would decide who is developing which
+              component.
+              <br />
+              <br />
+              After the first sprint cycle I quickly realised that I couldn’t
+              just give my team members a static drawing with a desktop view and
+              a mobile view as they would often code it differently to what I
+              had envisioned.
+              <br />
+              <br />
+              Most of the time it was fine as the end result was the same,
+              however sometimes because of their altered approach, the
+              responsive nature of the design would be altered, causing slight
+              errors in edge cases.
+              <br />
+              <br />
+              To solve this communication issue, I would simply make more
+              comments on my designs detailing how the components should
+              interact such as having the max width to 1028px. Other times, I
+              would message them individually to know that there has been a
+              misunderstanding in the task and how we can fix it.
+            </div>
+            <img className="w-full h-64"></img>
+          </section>
+
+          {/* Our first release */}
+          <section className="flex flex-col gap-4">
+            <h2 className=" text-5xl font-display text-center">
+              Our first release
+            </h2>
+            <div className="text-lg">
+              After the holidays we had scaled back quite a few ideas and
+              features in order to get the website deployed before University
+              started. All the back-end functions were put on hold in order to
+              make sure there is simply content that any new club members could
+              see.
+              <br />
+              <br />
+              Thinking back, setting realistic goals is definitely something
+              that I would need to work on. However, despite all the setbacks
+              and some late nights fixing bugs and implementing a simple leader
+              board type game for orientation week (that got hacked by my friend
+              in half an hour - I’m a designer not a cyber security specialist)
+              we relaunched our website and got over 81 site visits on our first
+              day!
+            </div>
+            <img className="w-full h-64"></img>
+          </section>
+
+          {/* Lessons and now */}
+          <section className="flex flex-col gap-4">
+            <h2 className=" text-5xl font-display text-center">
+              Lessons and now
+            </h2>
+            <div className="text-lg">
+              As I will be the website director for the whole of 2024, we are
+              still all learning and continuously improving the website. One
+              thing I learnt was that it is so useful having more participation
+              in the ideation phase during our meetings rather than me
+              presenting an idea to my team. Sometimes I have to call on my team
+              mates for their opinions but even when their ideas might not be
+              the best I try my best to note them down as who knows what can
+              develop from an unsuspecting idea.
+              <br />
+              <br />
+              As we are a club it is also difficult to make sure everyone is
+              balancing their uni work and any actual jobs with our club
+              responsibilities. I am now trying to have a better understanding
+              of everyones work loads in order to make sure my team isn’t burnt
+              out aswell.
+              <br />
+              <br />
+              Currently, our website is steadily increasing in traffic. From an
+              average of only 5 visitors a day before the website redesign to
+              over 20 visitors daily and that number is still growing! Obviously
+              these metrics are not the most important, but it is still nice
+              seeing that quantified success :)
+            </div>
+            <img className="w-full h-64"></img>
+          </section>
+
+          <section className="flex flex-col gap-4">
+            <h2 className=" text-5xl font-display text-center">
+              A snapshop of Hack.Melbourne (March 2024)
+            </h2>
+            <img className="w-full h-64"></img>
+          </section>
         </div>
       </div>
     </>
