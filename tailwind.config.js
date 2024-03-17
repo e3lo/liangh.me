@@ -1,15 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {
-      body: ['Poppins']
+      display: ['VT323'],
+      body: ['Poppins'],
     },
     extend: {},
   },
   plugins: [],
 }
-
