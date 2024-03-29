@@ -1,18 +1,38 @@
+import ProjectBanner from '../../components/parts/projectPage/projectBanner'
 import cover from '../../assets/HackMelbourne/thumbnail.png'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { ReactComponentElement, useRef } from 'react'
+import { Opacity } from '@mui/icons-material'
 
 const HackMelbourne = () => {
+  const headerRef = useRef<HTMLDivElement>(null)
+
+  let { scrollYProgress } = useScroll({
+    target: headerRef,
+    offset: ['start start', 'end start'],
+  })
+
+  let headerOpacity = useTransform(scrollYProgress, [0, 0.7], ['100%', '0%'])
+  let headerScale = useTransform(scrollYProgress, [0, 0.7], ['100%', '90%'])
+
   return (
     <>
-      <div className="flex flex-col max-w-screen-lg p-8 mx-auto gap-32">
-        {/* Cover */}
-        <section className="flex flex-col gap-2">
-          <div className="flex flex-row justify-between font-display items-end">
-            <h1 className=" text-3xl">HackMelbourne</h1>
-            <p className=" text-xl">Role: Website Director</p>
-          </div>
-          <img className="w-full object-cover" src={cover}></img>
-        </section>
+      {/* Cover */}
+      <motion.div
+        className="fixed w-full -z-10"
+        ref={headerRef}
+        style={{ opacity: headerOpacity, scale: headerScale }}
+      >
+        <ProjectBanner
+          title="HackMelbourne"
+          description="Role: Website Director"
+          src={cover}
+          alt="Home page of Hackmelbourne website"
+        ></ProjectBanner>
+      </motion.div>
+      <div className="w-full h-screen"></div>
 
+      <div className="flex flex-col max-w-screen-lg p-8 mx-auto gap-32 bg-neutral-50 z-10">
         {/* Content */}
         <div className="flex flex-col gap-32 max-w-screen-md mx-auto">
           {/* Prologue */}
@@ -133,10 +153,12 @@ const HackMelbourne = () => {
               <br />
               <br />
               In order to make sure that our team would work together
-              efficiently, I had also:
+              efficiently, I had also
               <ul className="list-disc list-inside">
                 <li>
-                  <strong>Changed to codebase to use Typescript </strong>
+                  <strong className=" font-body text-xl">
+                    Changed to codebase to use Typescript{' '}
+                  </strong>
                   as this would make connecting props between components much
                   easier
                 </li>
