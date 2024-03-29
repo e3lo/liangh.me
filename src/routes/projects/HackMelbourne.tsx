@@ -1,8 +1,9 @@
-import ProjectBanner from '../../components/parts/projectPage/projectBanner'
-import cover from '../../assets/HackMelbourne/thumbnail.png'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { ReactComponentElement, useRef } from 'react'
-import { Opacity } from '@mui/icons-material'
+import { useRef } from 'react'
+
+import ProjectBanner from '../../components/parts/projectPage/ProjectBanner'
+import cover from '../../assets/HackMelbourne/thumbnail.png'
+import { ANIMATIONSETTINGS as anim } from './constants'
 
 const HackMelbourne = () => {
   const headerRef = useRef<HTMLDivElement>(null)
@@ -32,13 +33,19 @@ const HackMelbourne = () => {
       </motion.div>
       <div className="w-full h-screen"></div>
 
+      {/* Content */}
       <div className="flex flex-col max-w-screen-lg p-8 mx-auto gap-32 bg-neutral-50 z-10">
-        {/* Content */}
         <div className="flex flex-col gap-32 max-w-screen-md mx-auto">
           {/* Prologue */}
           <section className="flex flex-col gap-4">
             <h2 className=" text-5xl font-display text-center">Prologue</h2>
-            <p className=" text-lg">
+            <motion.p
+              initial={{ opacity: 0, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: anim.delay, duration: anim.duration }}
+              viewport={{ once: true }}
+              className=" text-lg"
+            >
               After recklessly (in a good way of course) volunteering to be the
               website director of a Hackathon club, I was left with the redesign
               and development of the club’s website with very little technical
@@ -49,7 +56,7 @@ const HackMelbourne = () => {
               the ways of React.
               <br /> <br />
               *Exaggerated for literary effect
-            </p>
+            </motion.p>
           </section>
 
           {/* Defining the Issues */}
@@ -58,13 +65,19 @@ const HackMelbourne = () => {
               Defining the issues
             </h2>
             <img className="w-full h-64"></img>
-            <div className="text-lg">
-              <p className="">
+            <motion.div
+              initial={{ opacity: 0, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: anim.delay, duration: anim.duration }}
+              viewport={{ once: true }}
+              className="text-lg"
+            >
+              <motion.p className="">
                 During the start of my days as the Website Director I first
                 wanted to know what the biggest problems were with the current
                 website. I asked around my friends and the other club directors
                 for feedback and advice for what they wanted in the website.
-              </p>
+              </motion.p>
               <br />
               <p>The results of this inquiry showed that:</p>
               <ul className="list-disc list-inside">
@@ -72,7 +85,7 @@ const HackMelbourne = () => {
                 <li>The mobile view was not well optimised</li>
                 <li>There was very little reason to go to the website</li>
               </ul>
-            </div>
+            </motion.div>
           </section>
 
           {/* Finding Solutions */}
@@ -80,7 +93,13 @@ const HackMelbourne = () => {
             <h2 className=" text-5xl font-display text-center">
               Finding solutions
             </h2>
-            <div className="text-lg">
+            <motion.div
+              initial={{ opacity: 0, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: anim.delay, duration: anim.duration }}
+              viewport={{ once: true }}
+              className="text-lg"
+            >
               The website looking plain was to be expected and mobile issues are
               an easy fix. The main issue in my opinion was that there was no
               reason for people to go to the website. The website was static and
@@ -113,7 +132,7 @@ const HackMelbourne = () => {
                   with our clubs goal of making hackathons more accessible
                 </li>
               </ul>
-            </div>
+            </motion.div>
             <img className="w-full h-64"></img>
           </section>
 
@@ -122,7 +141,13 @@ const HackMelbourne = () => {
             <h2 className=" text-5xl font-display text-center">
               Experimenting
             </h2>
-            <div className="text-lg">
+            <motion.div
+              initial={{ opacity: 0, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: anim.delay, duration: anim.duration }}
+              viewport={{ once: true }}
+              className="text-lg"
+            >
               Utilising Figma, I created small mock-ups of the website and what
               kind of visual style I wanted to create. I knew I wanted to go
               with a dark theme as it matched the black background of our clubs
@@ -134,7 +159,7 @@ const HackMelbourne = () => {
               designing and revisiting the designs, I realised I needed
               something that would not make my new developers cry and getting a
               product out there would be more important.
-            </div>
+            </motion.div>
             <img className="w-full h-64"></img>
           </section>
 
@@ -143,7 +168,13 @@ const HackMelbourne = () => {
             <h2 className=" text-5xl font-display text-center">
               Assembling a team
             </h2>
-            <div className="text-lg">
+            <motion.div
+              initial={{ opacity: 0, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: anim.delay, duration: anim.duration }}
+              viewport={{ once: true }}
+              className="text-lg"
+            >
               Whilst I was creating the Figma drawings, I was also hosting
               interviews with our student engagement director to build my team
               of website officers. With very little experience in building a
@@ -176,7 +207,7 @@ const HackMelbourne = () => {
                   to assign tasks and make sure everyone is on the same page
                 </li>
               </ul>
-            </div>
+            </motion.div>
             <img className="w-full h-64"></img>
           </section>
 
@@ -185,7 +216,13 @@ const HackMelbourne = () => {
             <h2 className=" text-5xl font-display text-center">
               The beginning of development
             </h2>
-            <div className="text-lg">
+            <motion.div
+              initial={{ opacity: 0, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: anim.delay, duration: anim.duration }}
+              viewport={{ once: true }}
+              className="text-lg"
+            >
               At the start our teams workflow usually involved me creating the
               designs of a new component, then I would present it during our
               sprint meetings and then we would decide who is developing which
@@ -209,7 +246,7 @@ const HackMelbourne = () => {
               interact such as having the max width to 1028px. Other times, I
               would message them individually to know that there has been a
               misunderstanding in the task and how we can fix it.
-            </div>
+            </motion.div>
             <img className="w-full h-64"></img>
           </section>
 
@@ -218,7 +255,13 @@ const HackMelbourne = () => {
             <h2 className=" text-5xl font-display text-center">
               Our first release
             </h2>
-            <div className="text-lg">
+            <motion.div
+              initial={{ opacity: 0, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: anim.delay, duration: anim.duration }}
+              viewport={{ once: true }}
+              className="text-lg"
+            >
               After the holidays we had scaled back quite a few ideas and
               features in order to get the website deployed before University
               started. All the back-end functions were put on hold in order to
@@ -233,7 +276,7 @@ const HackMelbourne = () => {
               in half an hour - I’m a designer not a cyber security specialist)
               we relaunched our website and got over 81 site visits on our first
               day!
-            </div>
+            </motion.div>
             <img className="w-full h-64"></img>
           </section>
 
@@ -242,7 +285,13 @@ const HackMelbourne = () => {
             <h2 className=" text-5xl font-display text-center">
               Lessons and now
             </h2>
-            <div className="text-lg">
+            <motion.div
+              initial={{ opacity: 0, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: anim.delay, duration: anim.duration }}
+              viewport={{ once: true }}
+              className="text-lg"
+            >
               As I will be the website director for the whole of 2024, we are
               still all learning and continuously improving the website. One
               thing I learnt was that it is so useful having more participation
@@ -265,7 +314,7 @@ const HackMelbourne = () => {
               over 20 visitors daily and that number is still growing! Obviously
               these metrics are not the most important, but it is still nice
               seeing that quantified success :)
-            </div>
+            </motion.div>
             <img className="w-full h-64"></img>
           </section>
 
