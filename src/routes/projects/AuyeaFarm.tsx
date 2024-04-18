@@ -267,7 +267,7 @@ const AuyeaFarm = () => {
           {/* Our first release */}
           <section className="flex flex-col gap-4">
             <h2 className=" text-5xl font-display text-center">
-              Our first release
+              First major release!
             </h2>
             <motion.div
               initial={{ opacity: 0, y: 0 }}
@@ -276,20 +276,20 @@ const AuyeaFarm = () => {
               viewport={{ once: true }}
               className="text-lg"
             >
-              After the holidays we had scaled back quite a few ideas and
-              features in order to get the website deployed before University
-              started. All the back-end functions were put on hold in order to
-              make sure there is simply content that any new club members could
-              see.
-              <br />
-              <br />
-              Thinking back, setting realistic goals is definitely something
-              that I would need to work on. However, despite all the setbacks
-              and some late nights fixing bugs and implementing a simple leader
-              board type game for orientation week (that got hacked by my friend
-              in half an hour - I’m a designer not a cyber security specialist)
-              we relaunched our website and got over 81 site visits on our first
-              day!
+              <p>
+                After a few more bug fixes, updating image selections, and
+                implementing the Angular translation pipes as the Auyea catered
+                towards both English and Chinese speaking customers, my redesign
+                of the home page was finally deployed!
+              </p>
+              <p>
+                Whilst there is still a mountain of work ahead, I think its
+                always good to appreciate what has been accomplished aswell. As
+                of writing (APR 2024) there has not been a meaningful amount of
+                data to draw any conclusions about the effectiveness of the
+                redesign, however internally, everyone seems to quite like the
+                new designs!
+              </p>
             </motion.div>
             <img className="w-full h-64"></img>
           </section>
@@ -297,7 +297,7 @@ const AuyeaFarm = () => {
           {/* Lessons and now */}
           <section className="flex flex-col gap-4">
             <h2 className=" text-5xl font-display text-center">
-              Lessons and now
+              Lessons learnt
             </h2>
             <motion.div
               initial={{ opacity: 0, y: 0 }}
@@ -306,35 +306,42 @@ const AuyeaFarm = () => {
               viewport={{ once: true }}
               className="text-lg"
             >
-              As I will be the website director for the whole of 2024, we are
-              still all learning and continuously improving the website. One
-              thing I learnt was that it is so useful having more participation
-              in the ideation phase during our meetings rather than me
-              presenting an idea to my team. Sometimes I have to call on my team
-              mates for their opinions but even when their ideas might not be
-              the best I try my best to note them down as who knows what can
-              develop from an unsuspecting idea.
-              <br />
-              <br />
-              As we are a club it is also difficult to make sure everyone is
-              balancing their uni work and any actual jobs with our club
-              responsibilities. I am now trying to have a better understanding
-              of everyones work loads in order to make sure my team isn’t burnt
-              out aswell.
-              <br />
-              <br />
-              Currently, our website is steadily increasing in traffic. From an
-              average of only 5 visitors a day before the website redesign to
-              over 20 visitors daily and that number is still growing! Obviously
-              these metrics are not the most important, but it is still nice
-              seeing that quantified success :)
+              <p>
+                I would be lying if I said the repeated revisions did not
+                frustrate me. Even though I understand it is a crucial part of
+                the design process, the changing targets and requirements often
+                did make me feel a little annoyed. That said, this section is to
+                focus on what could have been done and what should be done in
+                the future!
+              </p>
+              <br></br>
+              <p>
+                To avoid revisions - especially those that require recoding the
+                entire page, I learnt just how important it is to have a high
+                fidelity mockup that can be tested. It is a lot more difficult
+                for those in non-technical roles to visualise how things may
+                work and having a good interactive mockup should minimise
+                scenarios where pages have to be recoded.
+              </p>
+              <br></br>
+              <p>
+                Scope creep! The most important thing I also learnt was to make
+                everything work first before adding all the fancy animations and
+                perfectly reusable components. Auyea is a small company and
+                whilst hard coding isn't ideal, deadlines aren't ideal either.
+                Sometimes, its better to just hard code a page in 30 minutes
+                than create a list of reusable components that fetch data from a
+                backend and implementing CRUD functionality which might take 3-4
+                hours when its unlikely to save any meaningful time in the next
+                5 years.
+              </p>
             </motion.div>
             <img className="w-full h-64"></img>
           </section>
 
           <section className="flex flex-col gap-4">
             <h2 className=" text-5xl font-display text-center">
-              A snapshop of Hack.Melbourne (March 2024)
+              A snapshop of Auyea.com.au (April 2024)
             </h2>
             <img className="w-full h-64"></img>
           </section>
