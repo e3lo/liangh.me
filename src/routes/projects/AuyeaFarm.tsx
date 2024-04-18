@@ -2,7 +2,9 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 
 import ProjectBanner from '../../components/parts/projectPage/ProjectBanner'
-import cover from '../../assets/HackMelbourne/thumbnail.png'
+import cover from '../../assets/AuyeaFarm/thumbnail.png'
+import coverMobile from '../../assets/AuyeaFarm/coverMobile.png'
+
 import { ANIMATIONSETTINGS as anim } from './constants'
 
 const AuyeaFarm = () => {
@@ -27,11 +29,12 @@ const AuyeaFarm = () => {
         <ProjectBanner
           title="Auyea Farm"
           description="Role: UI/UX Designer + Front End Developer"
-          src={cover}
+          srcDesktop={cover}
+          srcMobile={coverMobile}
           alt="Home page of Auyea website"
         ></ProjectBanner>
       </motion.div>
-      <div className="w-full h-screen"></div>
+      <div className="w-full h-[90vh]"></div>
 
       {/* Content */}
       <div className="flex flex-col max-w-screen-lg p-8 mx-auto gap-32 bg-neutral-50 z-10">

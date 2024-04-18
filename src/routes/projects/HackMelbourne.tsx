@@ -3,6 +3,7 @@ import { useRef } from 'react'
 
 import ProjectBanner from '../../components/parts/projectPage/ProjectBanner'
 import cover from '../../assets/HackMelbourne/thumbnail.png'
+import coverMobile from '../../assets/HackMelbourne/coverMobile.png'
 import { ANIMATIONSETTINGS as anim } from './constants'
 
 const HackMelbourne = () => {
@@ -27,11 +28,12 @@ const HackMelbourne = () => {
         <ProjectBanner
           title="HackMelbourne"
           description="Role: Website Director"
-          src={cover}
+          srcDesktop={cover}
+          srcMobile={coverMobile}
           alt="Home page of Hackmelbourne website"
         ></ProjectBanner>
       </motion.div>
-      <div className="w-full h-screen"></div>
+      <div className="w-full h-[90vh]"></div>
 
       {/* Content */}
       <div className="flex flex-col max-w-screen-lg p-8 mx-auto gap-32 bg-neutral-50 z-10">

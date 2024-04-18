@@ -20,7 +20,7 @@ const FeaturedProject = ({
   date,
 }: FeaturedProps) => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col">
       <img className="w-full object-cover" src={image} alt={alt}></img>
       <div className="flex flex-col-reverse md:flex-row md:justify-between">
         <div className="flex flex-col gap-2 max-w-lg">
