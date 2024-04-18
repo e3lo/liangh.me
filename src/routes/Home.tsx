@@ -41,7 +41,7 @@ function Home() {
 
   return (
     <>
-      <div className="flex flex-col max-w-screen-lg mx-auto px-4 gap-24 pb-8">
+      <div className="flex flex-col max-w-screen-lg mx-auto px-4 gap-24 pb-8 pt-32">
         {/* Introduction */}
         <section className="w-full bg-orange-100 flex flex-col md:flex-row p-16 md:items-center gap-8 items-start">
           <img
