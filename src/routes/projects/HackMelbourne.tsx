@@ -6,6 +6,9 @@ import cover from '../../assets/HackMelbourne/thumbnail.png'
 import coverMobile from '../../assets/HackMelbourne/coverMobile.png'
 import { ANIMATIONSETTINGS as anim } from './constants'
 
+import img1 from '../../assets/HackMelbourne/img1.jpg'
+import img2 from '../../assets/HackMelbourne/img2.jpg'
+
 const HackMelbourne = () => {
   const headerRef = useRef<HTMLDivElement>(null)
 
@@ -66,7 +69,7 @@ const HackMelbourne = () => {
             <h2 className=" text-5xl font-display text-center">
               Defining the issues
             </h2>
-            <img className="w-full h-64"></img>
+            <img className="w-full" src={img1}></img>
             <motion.div
               initial={{ opacity: 0, y: 0 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -135,7 +138,7 @@ const HackMelbourne = () => {
                 </li>
               </ul>
             </motion.div>
-            <img className="w-full h-64"></img>
+            <img className="w-full" src={img2}></img>
           </section>
 
           {/* Finding Solutions */}
