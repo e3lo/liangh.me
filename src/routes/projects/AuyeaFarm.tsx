@@ -50,14 +50,20 @@ const AuyeaFarm = () => {
               className=" text-lg"
             >
               Entering a small start-up I was tasked to help redesign and
-              redevelop their landing page utilising Angular. Being unfamiliar
-              with Angular, I found myself needing to quickly learn the Angular
-              framework on the go.
+              redevelop their landing page utilising{' '}
+              <strong> Angular 12 </strong>. Being unfamiliar with Angular, I
+              found myself needing to quickly learn the Angular framework on the
+              go.
               <br />
               <br />
-              Auyea's home page was in dire need of a redesign as their shift in
-              business strategy to attract more new customers required the
-              bounce rate for the home page to be as low as possible.
+              Auyea's home page was in need of a redesign as their shift in
+              business strategy to attract more new customers{' '}
+              <strong>
+                {' '}
+                required the bounce rate for the home page to be as low as
+                possible{' '}
+              </strong>
+              .
             </motion.p>
           </section>
 
@@ -75,28 +81,35 @@ const AuyeaFarm = () => {
               className="text-lg"
             >
               <motion.p className="">
-                From the start I first examined how the website felt through
-                browsing around the website. Then I got feedback and thoughts
-                from the workers and founders as to what issues they feel like
-                are present what they operate the home page. I wanted to do more
-                research, however as we were in a time crunch and I needed to
-                present an initial design within a week, the majority of
-                problems were what I thought may have been present.
+                I first examined how the website felt through browsing around
+                the website through a
+                <strong> task analysis of making a purchase</strong>.
               </motion.p>
               <br />
-              <p>The results of this "inquiry" showed that:</p>
+              Additionally I utilised
+              <strong> qualitative interviews from staff memebers </strong>
+              regarding their experiences on the website and thoughts they had
+              that could be improved
+              <br />
+              <br />
+              <p>The results of this inquiry showed that:</p>
               <ul className="list-disc list-inside">
                 <li>
-                  The website lacked the brand identity that was found in their
-                  promotional materials
+                  The <strong>website lacked the brand identity</strong> that
+                  was found in their promotional materials
                 </li>
                 <li>
-                  Certain buttons were fancy, but the user would not know it was
-                  a button
+                  Certain buttons were fancy, but the{' '}
+                  <strong>
+                    user may find it difficult to associate it as a button
+                  </strong>
                 </li>
                 <li>
-                  The main target audience are moms in their 40s-60s which meant
-                  they were not very technologically literate
+                  The{' '}
+                  <strong>
+                    main target audience are moms in their 40s-60s
+                  </strong>{' '}
+                  which meant they were not very technologically literate
                 </li>
               </ul>
             </motion.div>
@@ -105,7 +118,7 @@ const AuyeaFarm = () => {
           {/* Finding Solutions */}
           <section className="flex flex-col gap-4">
             <h2 className=" text-5xl font-display text-center">
-              Finding solutions
+              Finding solutions through Figma
             </h2>
             <motion.div
               initial={{ opacity: 0, y: 0 }}
@@ -114,16 +127,19 @@ const AuyeaFarm = () => {
               viewport={{ once: true }}
               className="text-lg"
             >
-              Initially, my approach seeked to simplify the home page as the
-              majority of customers were there to make a purchase for Auyea's
-              webstore. I decided to continue and extend Auyea's flat 2D art
-              style to build more coherence between the branding of the printed
-              materials.
+              First I wanted to <strong> simplify the home page </strong> to
+              make getting to the online store the main focus.
               <br />
               <br />
-              To make the website easier to use, I decided to use the standard
-              buttons with simple rounded edges, I added an on hover and on
-              press effect for extra feedback to the users.
+              Additionally, I decided to continue and extend Auyea's flat 2D art
+              style from its packaging graphics to build more
+              <strong>
+                {' '}
+                coherence between the physical and digital branding
+              </strong>
+              <br />
+              <br />I also simplified the button design to be{' '}
+              <strong> simple yet still represent Auyea's colour scheme</strong>
             </motion.div>
             <img className="w-full h-64"></img>
           </section>
@@ -131,7 +147,7 @@ const AuyeaFarm = () => {
           {/* Finding Solutions */}
           <section className="flex flex-col gap-4">
             <h2 className=" text-5xl font-display text-center">
-              Second iteration
+              First iteration
             </h2>
             <motion.div
               initial={{ opacity: 0, y: 0 }}
@@ -148,17 +164,9 @@ const AuyeaFarm = () => {
                 within Angular
               </p>
               <p>
-                In order to make the components more reusable, I had made the
-                components all take in props (or the angular equivalent) so that
-                ideally each page would be made up of multiple Angular
-                components which made maintaining the contents much easier.
-              </p>
-              <p>
-                However, after another strategy meeting, we decided that the
-                hero section needed to be reworked as Auyea wished to promote
-                their two areas equally. This was quite a design challenge as
-                Auyea wanted to essentially display two "cards" on the hero
-                screen simultaneously.
+                However, during one of our daily standups, we realised we wanted
+                to promote both the events aswell as the online shop that Auyea
+                was creating.
               </p>
               <p>
                 This was quite a challenge as on the mobile screen it was
@@ -173,7 +181,7 @@ const AuyeaFarm = () => {
           {/* Assembling a team */}
           <section className="flex flex-col gap-4">
             <h2 className=" text-5xl font-display text-center">
-              Third iteration
+              Second Iteration
             </h2>
             <motion.div
               initial={{ opacity: 0, y: 0 }}
@@ -188,15 +196,6 @@ const AuyeaFarm = () => {
                 needed to squeeze the content in the mobile viewport, the
                 desktop view felt a little too empty.
               </p>
-              <p>
-                To address this I had considered using a series of parallax
-                effects such that the hero page is a lake that when the user
-                scrolls down, the lake opens up to them. However, I quickly
-                realised I didn't have the artistic skills to first draw the
-                lake in the Auyea's visual style and the implementation would
-                take a lot longer than the time the project provided.
-              </p>
-              <img className="w-full h-64"></img>
               <p>
                 Thus I settled with using a parallax image background that
                 featured a gradient to lead the user into the next portion of
