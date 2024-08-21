@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import profile from '../assets/profilePic.jpg'
 
 import FeaturedProject from '../components/parts/featuredProject/FeaturedProject'
@@ -12,7 +11,7 @@ function Home() {
   const projectList: FeaturedProps[] = [
     {
       title: 'HackMelbourne',
-      body: 'After recklessly (in a good way of course) volunteering to be the website director of a Hackathon club, I was left with the redesign and development of the club’s website with very little technical knowledge of react and zero team members...',
+      body: 'After volunteering to be the website director of a Hackathon club, I was left with the redesign and development of the club’s website with very little technical knowledge of react and zero team members...',
       image: HMPhoto,
       alt: 'HackMelbourne home page',
       role: 'Website Director',
