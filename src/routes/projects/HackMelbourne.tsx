@@ -8,6 +8,9 @@ import { ANIMATIONSETTINGS as anim } from './constants'
 
 import img1 from '../../assets/HackMelbourne/img1.jpg'
 import img2 from '../../assets/HackMelbourne/img2.jpg'
+import img3 from '../../assets/HackMelbourne/img3.jpg'
+import img4 from '../../assets/HackMelbourne/img4.jpg'
+import img5 from '../../assets/HackMelbourne/img5.jpg'
 
 const HackMelbourne = () => {
   const headerRef = useRef<HTMLDivElement>(null)
@@ -51,10 +54,10 @@ const HackMelbourne = () => {
               viewport={{ once: true }}
               className=" text-lg"
             >
-              After recklessly (in a good way of course) volunteering to be the
-              website director of a Hackathon club, I was left with the redesign
-              and development of the club’s website with very little technical
-              knowledge of react and zero team members.
+              After volunteering to be the website director of a Hackathon club,
+              I was left with the redesign and development of the club’s website
+              with very little technical knowledge of react and zero team
+              members.
               <br /> <br />
               As there was 2 more weeks before my official handover. In those
               two weeks I spent every single waking hour* dedicated to learning
@@ -141,7 +144,7 @@ const HackMelbourne = () => {
             <img className="w-full" src={img2}></img>
           </section>
 
-          {/* Finding Solutions */}
+          {/* Figma */}
           <section className="flex flex-col gap-4">
             <h2 className=" text-5xl font-display text-center">
               Experimenting
@@ -165,7 +168,7 @@ const HackMelbourne = () => {
               something that would not make my new developers cry and getting a
               product out there would be more important.
             </motion.div>
-            <img className="w-full h-64"></img>
+            <img className="w-full" src={img3}></img>
           </section>
 
           {/* Assembling a team */}
@@ -192,9 +195,7 @@ const HackMelbourne = () => {
               efficiently, I had also
               <ul className="list-disc list-inside">
                 <li>
-                  <strong className=" font-body text-xl">
-                    Changed to codebase to use Typescript{' '}
-                  </strong>
+                  <strong>Changed to codebase to use Typescript </strong>
                   as this would make connecting props between components much
                   easier
                 </li>
@@ -213,10 +214,10 @@ const HackMelbourne = () => {
                 </li>
               </ul>
             </motion.div>
-            <img className="w-full h-64"></img>
+            <img className="w-full" src={img4}></img>
           </section>
 
-          {/* Assembling a team */}
+          {/* The beginning of development */}
           <section className="flex flex-col gap-4">
             <h2 className=" text-5xl font-display text-center">
               The beginning of development
@@ -228,31 +229,21 @@ const HackMelbourne = () => {
               viewport={{ once: true }}
               className="text-lg"
             >
-              At the start our teams workflow usually involved me creating the
-              designs of a new component, then I would present it during our
-              sprint meetings and then we would decide who is developing which
-              component.
+              As we developed the website, our workflow changed accordingly to
+              our needs and the lessons I learnt along the way. The main thing I
+              realised was how{' '}
+              <strong>
+                important communicating the design was to my teammates{' '}
+              </strong>{' '}
+              as their interpretation would often be different to how I
+              envisioned it.
               <br />
               <br />
-              After the first sprint cycle I quickly realised that I couldn’t
-              just give my team members a static drawing with a desktop view and
-              a mobile view as they would often code it differently to what I
-              had envisioned.
-              <br />
-              <br />
-              Most of the time it was fine as the end result was the same,
-              however sometimes because of their altered approach, the
-              responsive nature of the design would be altered, causing slight
-              errors in edge cases.
-              <br />
-              <br />
-              To solve this communication issue, I would simply make more
-              comments on my designs detailing how the components should
-              interact such as having the max width to 1028px. Other times, I
-              would message them individually to know that there has been a
-              misunderstanding in the task and how we can fix it.
+              Because of this, I learnt to give lots of comments and
+              explanations for my team members on the figma files detailing
+              behaviour for edge cases and responsiveness.
             </motion.div>
-            <img className="w-full h-64"></img>
+            <img className="w-full" src={img5}></img>
           </section>
 
           {/* Our first release */}
@@ -269,18 +260,13 @@ const HackMelbourne = () => {
             >
               After the holidays we had scaled back quite a few ideas and
               features in order to get the website deployed before University
-              started. All the back-end functions were put on hold in order to
-              make sure there is simply content that any new club members could
-              see.
+              started.
               <br />
               <br />
-              Thinking back, setting realistic goals is definitely something
-              that I would need to work on. However, despite all the setbacks
-              and some late nights fixing bugs and implementing a simple leader
-              board type game for orientation week (that got hacked by my friend
-              in half an hour - I’m a designer not a cyber security specialist)
-              we relaunched our website and got over 81 site visits on our first
-              day!
+              Thinking back,<strong> setting realistic goals</strong> is
+              definitely something that I would need to work on. However,
+              despite all the setbacks we were able to release on time and
+              receive <strong>over 100 site visits on our opening day!</strong>
             </motion.div>
             <img className="w-full h-64"></img>
           </section>
