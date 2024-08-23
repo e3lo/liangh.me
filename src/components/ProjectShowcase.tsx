@@ -4,7 +4,7 @@ import StickyProjectDisplay from './parts/StickyProjectDisplay'
 // import casIndexImg2 from "../assets/CasIndex/thumbnail2.png";
 
 import GSImg1 from '../assets/GroupSpace/Login.png'
-import GSImg2 from '../assets/GroupSpace/HomePage.png'
+import GSImg2 from '../assets/GroupSpace/Homepage.png'
 
 import CCImg1 from '../assets/CulinaryCode/thumbnail1.png'
 import CCImg2 from '../assets/CulinaryCode/thumbnail2.png'
