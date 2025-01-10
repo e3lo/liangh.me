@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import profile from '../assets/profilePic.jpg'
 
 import FeaturedProject from '../components/parts/featuredProject/FeaturedProject'
@@ -39,6 +38,8 @@ function Home() {
     },
   ]
 
+  const miniProjectList = []
+
   return (
     <>
       <div className="flex flex-col max-w-screen-lg mx-auto px-4 gap-24 pb-8 pt-32">
@@ -50,9 +51,8 @@ function Home() {
           ></img>
           <p className="font-display text-2xl">
             Hi I’m Liang! Welcome to my portfolio :) I enjoy designing and
-            creating fun and unique ideas. I'm a UI/UX designer that is also
-            proficient in front-end development, this website is designed and
-            made by me in React.
+            developing fun and unique ideas. Here are some of the projects I
+            have created by myself or with others
           </p>
         </section>
 
@@ -63,6 +63,17 @@ function Home() {
             {projectList.map((value, index) => (
               <FeaturedProject {...value} key={index}></FeaturedProject>
             ))}
+          </div>
+        </section>
+
+        {/* Smaller Projects */}
+        <section>
+          <div>
+            <h2 className="font-display text-5xl">More Projects</h2>
+            <p>
+              Less featured but still playing a large role in my journey as a
+              UI/UX designer
+            </p>
           </div>
         </section>
       </div>
